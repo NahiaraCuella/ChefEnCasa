@@ -13,16 +13,16 @@ CREATE Pais{
 }
 
 CREATE Recetas {
-    cantidad de personas INT
-    paso a paso TEXT
-    tipo de dificultad CHAR(3)
-    id_user INT FOREIGN KEY
-    id INT PRIMARY KEY AUTO_INCREMENT
-    Id_pais INT FOREIGN KEY
-    id_ingredientes INT FOREIGN KEY
-    id_cocciones INT FOREIGN KEY
-    id_momentoDia INT FOREIGN KEY
-    id dietas INT FOREIGN KEY AUTO_INCREMENT
+    cantidad_de_personas INT,
+    paso_a_paso TEXT,
+    tipo_de_dificultad CHAR(3),
+    id_user INT FOREIGN KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_pais INT FOREIGN KEY,
+    id_ingredientes INT FOREIGN KEY,
+    id_cocciones INT FOREIGN KEY,
+    id_momentoDia INT FOREIGN KEY,
+    id_dietas INT FOREIGN KEY
 }
 
 CREATE TABLE Coccion{
@@ -48,11 +48,11 @@ CREATE rec_ing{
 }
 
 CREATE Dietas {
-	nombre de recetas VARCHAR(50),
+	nombre_de_recetas VARCHAR(50),
 	id INT PRIMARY KEY AUTO_INCREMENT
 }
 
 CREATE momentos_dias {
     momentos_del_dias VARCHAR(50),
-    ID INT PRIMARY KEY AUTO_INCREMENT
+    id INT PRIMARY KEY AUTO_INCREMENT
 }
