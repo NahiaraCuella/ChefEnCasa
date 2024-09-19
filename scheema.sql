@@ -81,3 +81,11 @@ INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
       ('jorge','jorge@gmail.com','777','Ingles'),
       ('rosa','rosa@gmail.com','222','Español');
+
+
+UPDATE usuario
+SET contrasenia = '123'
+WHERE id = '4';
+
+DELETE FROM usuario
+WHERE id = '5';
