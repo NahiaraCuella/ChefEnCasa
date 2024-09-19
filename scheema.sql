@@ -85,6 +85,26 @@ VALUES ('adhara','adhara@gmail.com','111','Español'),
 
 INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
 
+<<<<<<< HEAD
 UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
 
 DELETE FROM pais WHERE nombre = "Colombia";
+=======
+
+INSERT INTO (nombre)
+VALUES ("plancha"),
+   	("horno"),
+   	("hervido"),
+   	("freidora de aire"),
+   	("frito"),
+   	("microondas"),
+   	("parrilla"),
+   	("sin cocina");
+
+UPDATE coccion
+SET nombre = "batido"
+WHERE id = 5;
+
+DELETE FROM coccion
+WHERE id = 6;
+>>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
