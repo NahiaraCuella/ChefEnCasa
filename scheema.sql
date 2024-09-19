@@ -102,3 +102,41 @@ WHERE id = 5;
 
 DELETE FROM coccion
 WHERE id = 6;
+
+//sf
+//ingredientes
+INSERT INTO ingredientes (tipo_de_ingredientes)
+ VALUES  ('Verduras'),
+                 ( 'Carnes'),
+                 ( 'Lácteos');
+
+
+SELECT * FROM ingredientes;
+
+
+UPDATE ingredientes
+SET tipo_de_ingredientes = 'Frutas'
+WHERE ID = 1;
+
+
+DELETE FROM ingredientes
+WHERE ID = 2;
+//sf
+//medidas
+INSERT INTO medidas (recetas) 
+VALUES ('Receta 1'); 
+
+INSERT INTO medidas (recetas) 
+VALUES ('Receta 2'); 
+
+INSERT INTO medidas (recetas) 
+VALUES ( 'Receta 3');
+
+
+SELECT * FROM medidas;
+
+
+UPDATE medidas SET recetas = 'Receta Actualizada' WHERE id = 1;
+
+DELETE FROM medidas WHERE id = 2;
+//
