@@ -76,3 +76,12 @@ CREATE TABLE rec_ing(
 DROP TABLE momentos_dias;
 DESCRIBE pais;
 SHOW TABLES;
+
+/* inserte los datos en la tabla de momentos del dia*/
+INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
+('desayuno', 'Primera comida del día, generalmente por la mañana.'),
+('almuerzo', 'Comida principal del día, normalmente al mediodía.'),
+('cena', 'Comida que se toma por la noche.'),
+('postre', 'Plato dulce que se sirve después de la comida.'),
+('snacks', 'Comidas ligeras entre las comidas principales.'),
+('merienda', 'Comida ligera que se toma entre la tarde y la cena.');
