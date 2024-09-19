@@ -76,3 +76,8 @@ CREATE TABLE rec_ing(
 DROP TABLE momentos_dias;
 DESCRIBE pais;
 SHOW TABLES;
+
+INSERT INTO usuario (user,email, contrasenia, idioma)
+VALUES ('adhara','adhara@gmail.com','111','Español'),
+      ('jorge','jorge@gmail.com','777','Ingles'),
+      ('rosa','rosa@gmail.com','222','Español');
