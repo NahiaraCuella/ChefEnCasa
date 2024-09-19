@@ -77,6 +77,7 @@ DROP TABLE momentos_dias;
 DESCRIBE pais;
 SHOW TABLES;
 
+<<<<<<< HEAD
 /* inserte los datos en la tabla de momentos del dia*/
 INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
 ('desayuno', 'Primera comida del día, generalmente por la mañana.'),
@@ -85,3 +86,48 @@ INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
 ('postre', 'Plato dulce que se sirve después de la comida.'),
 ('snacks', 'Comidas ligeras entre las comidas principales.'),
 ('merienda', 'Comida ligera que se toma entre la tarde y la cena.');
+=======
+INSERT INTO usuario (user,email, contrasenia, idioma)
+VALUES ('adhara','adhara@gmail.com','111','Español'),
+      ('jorge','jorge@gmail.com','777','Ingles'),
+      ('rosa','rosa@gmail.com','222','Español');
+
+
+<<<<<<< HEAD
+UPDATE usuario
+SET contrasenia = '123'
+WHERE id = '4';
+
+DELETE FROM usuario
+WHERE id = '5';
+=======
+INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
+
+<<<<<<< HEAD
+UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
+
+DELETE FROM pais WHERE nombre = "Colombia";
+
+SELECT DISTINCT nombre from pais;
+DELETE FROM pais WHERE nombre = "brasil";
+=======
+
+INSERT INTO (nombre)
+VALUES ("plancha"),
+   	("horno"),
+   	("hervido"),
+   	("freidora de aire"),
+   	("frito"),
+   	("microondas"),
+   	("parrilla"),
+   	("sin cocina");
+
+UPDATE coccion
+SET nombre = "batido"
+WHERE id = 5;
+
+DELETE FROM coccion
+WHERE id = 6;
+>>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
+>>>>>>> c6deac25d17fd2962adaea4dc39022b00357fab6
+>>>>>>> b5a77dab93a7c4b9f7495e7dd33e53a047a2883b
