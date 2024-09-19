@@ -97,6 +97,9 @@ INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
 UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
 
 DELETE FROM pais WHERE nombre = "Colombia";
+
+SELECT DISTINCT nombre from pais;
+DELETE FROM pais WHERE nombre = "brasil";
 =======
 
 INSERT INTO (nombre)
