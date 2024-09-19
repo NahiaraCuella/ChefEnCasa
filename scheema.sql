@@ -81,3 +81,6 @@ INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
       ('jorge','jorge@gmail.com','777','Ingles'),
       ('rosa','rosa@gmail.com','222','Español');
+
+
+INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
