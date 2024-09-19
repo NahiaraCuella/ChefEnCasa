@@ -34,6 +34,9 @@ CREATE TABLE momentos_dias (
     id INT PRIMARY KEY AUTO_INCREMENT
 )
 
+ALTER TABLE momentos_dias
+ADD COLUMN descripcion VARCHAR(100);
+
 CREATE TABLE ingredientes (
    ID INT PRIMARY KEY AUTO_INCREMENT,
    tipo_de_ingrediente VARCHAR(50)
