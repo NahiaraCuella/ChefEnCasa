@@ -16,7 +16,7 @@ CREATE TABLE usuario(
 
 CREATE TABLE pais(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50)
+    nombre VARCHAR(50) UNIQUE
 )
 
 CREATE TABLE coccion(
@@ -110,6 +110,9 @@ DELETE FROM pais WHERE nombre = "Colombia";
 
 SELECT DISTINCT nombre from pais;
 DELETE FROM pais WHERE nombre = "brasil";
+DELETE FROM pais WHERE id = 10;
+
+ALTER TABLE pais ADD CONSTRAINT unique_nombre UNIQUE (nombre);
 =======
 
 INSERT INTO (nombre)
