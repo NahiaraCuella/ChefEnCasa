@@ -83,9 +83,37 @@ VALUES ('adhara','adhara@gmail.com','111','Español'),
       ('rosa','rosa@gmail.com','222','Español');
 
 
+<<<<<<< HEAD
 UPDATE usuario
 SET contrasenia = '123'
 WHERE id = '4';
 
 DELETE FROM usuario
 WHERE id = '5';
+=======
+INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
+
+<<<<<<< HEAD
+UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
+
+DELETE FROM pais WHERE nombre = "Colombia";
+=======
+
+INSERT INTO (nombre)
+VALUES ("plancha"),
+   	("horno"),
+   	("hervido"),
+   	("freidora de aire"),
+   	("frito"),
+   	("microondas"),
+   	("parrilla"),
+   	("sin cocina");
+
+UPDATE coccion
+SET nombre = "batido"
+WHERE id = 5;
+
+DELETE FROM coccion
+WHERE id = 6;
+>>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
+>>>>>>> c6deac25d17fd2962adaea4dc39022b00357fab6
