@@ -84,3 +84,7 @@ VALUES ('adhara','adhara@gmail.com','111','Español'),
 
 
 INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
+
+UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
+
+DELETE FROM pais WHERE nombre = "Colombia";
