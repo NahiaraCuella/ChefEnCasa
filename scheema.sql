@@ -197,6 +197,9 @@ DELETE FROM medidas WHERE id = 2;
 
 ALTER TABLE medidas DROP FOREIGN KEY medidas_ibfk_1; 
 
+ALTER TABLE nombre_tabla
+DROP COLUMN columna;
+
 //
 =======
 >>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
