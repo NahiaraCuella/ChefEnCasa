@@ -194,6 +194,9 @@ SELECT * FROM medidas;
 UPDATE medidas SET recetas = 'Receta Actualizada' WHERE id = 1;
 
 DELETE FROM medidas WHERE id = 2;
+
+ALTER TABLE medidas DROP FOREIGN KEY medidas_ibfk_1; 
+
 //
 =======
 >>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
