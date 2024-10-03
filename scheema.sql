@@ -16,7 +16,7 @@ CREATE TABLE usuario(
 
 CREATE TABLE pais(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50)
+    nombre VARCHAR(50) UNIQUE
 )
 
 CREATE TABLE coccion(
@@ -33,6 +33,9 @@ CREATE TABLE momentos_dias (
     momentos_del_dias VARCHAR(50),
     id INT PRIMARY KEY AUTO_INCREMENT
 )
+
+ALTER TABLE momentos_dias
+ADD COLUMN descripcion VARCHAR(100);
 
 CREATE TABLE ingredientes (
    ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -77,6 +80,16 @@ DROP TABLE momentos_dias;
 DESCRIBE pais;
 SHOW TABLES;
 
+<<<<<<< HEAD
+/* inserte los datos en la tabla de momentos del dia*/
+INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
+('desayuno', 'Primera comida del día, generalmente por la mañana.'),
+('almuerzo', 'Comida principal del día, normalmente al mediodía.'),
+('cena', 'Comida que se toma por la noche.'),
+('postre', 'Plato dulce que se sirve después de la comida.'),
+('snacks', 'Comidas ligeras entre las comidas principales.'),
+('merienda', 'Comida ligera que se toma entre la tarde y la cena.');
+=======
 INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
        ('jorge','jorge@gmail.com','777','Ingles'),
@@ -114,6 +127,15 @@ UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
 
 DELETE FROM pais WHERE nombre = "Colombia";
 
+<<<<<<< HEAD
+=======
+SELECT DISTINCT nombre from pais;
+DELETE FROM pais WHERE nombre = "brasil";
+DELETE FROM pais WHERE id = 10;
+
+ALTER TABLE pais ADD CONSTRAINT unique_nombre UNIQUE (nombre);
+=======
+>>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
 
 INSERT INTO (nombre)
 VALUES ("plancha"),
@@ -131,4 +153,51 @@ WHERE id = 5;
 
 DELETE FROM coccion
 WHERE id = 6;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+//sf
+//ingredientes
+INSERT INTO ingredientes (tipo_de_ingredientes)
+ VALUES  ('Verduras'),
+                 ( 'Carnes'),
+                 ( 'Lácteos');
+
+
+SELECT * FROM ingredientes;
+
+
+UPDATE ingredientes
+SET tipo_de_ingredientes = 'Frutas'
+WHERE ID = 1;
+
+
+DELETE FROM ingredientes
+WHERE ID = 2;
+//sf
+//medidas
+INSERT INTO medidas (recetas) 
+VALUES ('Receta 1'); 
+
+INSERT INTO medidas (recetas) 
+VALUES ('Receta 2'); 
+
+INSERT INTO medidas (recetas) 
+VALUES ( 'Receta 3');
+
+
+SELECT * FROM medidas;
+
+
+UPDATE medidas SET recetas = 'Receta Actualizada' WHERE id = 1;
+
+DELETE FROM medidas WHERE id = 2;
+//
+=======
+>>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
+>>>>>>> c6deac25d17fd2962adaea4dc39022b00357fab6
+>>>>>>> b5a77dab93a7c4b9f7495e7dd33e53a047a2883b
+>>>>>>> e619c37bdf74630427c7df9025049295fa68edc2
+>>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
