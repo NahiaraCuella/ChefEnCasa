@@ -79,25 +79,41 @@ SHOW TABLES;
 
 INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
-      ('jorge','jorge@gmail.com','777','Ingles'),
-      ('rosa','rosa@gmail.com','222','Español');
-
-
-<<<<<<< HEAD
+       ('jorge','jorge@gmail.com','777','Ingles'),
+       ('rosa','rosa@gmail.com','222','Español');
 UPDATE usuario
 SET contrasenia = '123'
 WHERE id = '4';
 
 DELETE FROM usuario
 WHERE id = '5';
-=======
+
+INSERT INTO dietas (nombre_de_recetas)
+VALUES ('Vegana'),
+       ('Fitness'),
+       ('Sin T.A.C.C');
+
+UPDATE dietas
+SET nombre_de_recetas = 'Vegetariana'
+WHERE id = '1';
+
+DELETE FROM dietas
+WHERE id = '2';
+
+DELETE FROM dietas
+WHERE id = '3';
+
+DELETE FROM dietas
+WHERE id = '4';
+
+
 INSERT INTO pais (nombre) VALUES ("Argentina"),("Brasil"),("Colombia");
 
-<<<<<<< HEAD
+
 UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
 
 DELETE FROM pais WHERE nombre = "Colombia";
-=======
+
 
 INSERT INTO (nombre)
 VALUES ("plancha"),
@@ -115,5 +131,4 @@ WHERE id = 5;
 
 DELETE FROM coccion
 WHERE id = 6;
->>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
->>>>>>> c6deac25d17fd2962adaea4dc39022b00357fab6
+
