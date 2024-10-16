@@ -247,3 +247,28 @@ VALUES ('Facil'),
 >>>>>>> b5a77dab93a7c4b9f7495e7dd33e53a047a2883b
 >>>>>>> e619c37bdf74630427c7df9025049295fa68edc2
 >>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
+
+
+UPDATE usuario
+SET pais_id = 1
+WHERE id = 1;
+
+UPDATE usuario
+SET pais_id = 13
+WHERE id = 3;
+
+UPDATE usuario
+SET pais_id = 2
+WHERE id = 4;
+
+UPDATE usuario
+SET pais_id = 1
+WHERE id = 6;
+
+
+UPDATE usuario
+SET pais_id = 14
+WHERE id = 2;
+
+INSERT INTO pais (nombre) 
+VALUES ("Inglaterra")
