@@ -60,24 +60,16 @@ CREATE TABLE recetas_por_dieta(
     dieta_id INT,
     PRIMARY KEY (receta_id,dieta_id),
     FOREIGN KEY (dieta_id) REFERENCES dietas(id),
-    FOREIGN KEY (receta_id) REFERENCES recetas(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id)
 )
 
 CREATE TABLE recetas_por_momento_de_dia(
     receta_id INT,
     momentoDia_id INT,
     PRIMARY KEY (receta_id,momentoDia_id),
-    FOREIGN KEY (momentoDia_id) REFERENCES momentoDia(id),
-    FOREIGN KEY (receta_id) REFERENCES recetas(id),
-)
-
-CREATE TABLE recetas_cocciones(
-    receta_id INT,
-    cocciones_id INT,
-    PRIMARY KEY (receta_id,cocciones_id),
-    FOREIGN KEY (cocciones_id) REFERENCES cocciones(id),
-    FOREIGN KEY (receta_id) REFERENCES recetas(id),
-)
+    FOREIGN KEY (momentoDia_id) REFERENCES momentos_dias(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id)
+);
 
 CREATE TABLE recetas_ingredientes(
     receta_id INT,
@@ -85,7 +77,9 @@ CREATE TABLE recetas_ingredientes(
     PRIMARY KEY (receta_id,ingredientes_id),
     FOREIGN KEY (ingredientes_id) REFERENCES ingredientes(id),
     FOREIGN KEY (receta_id) REFERENCES recetas(id)
-    
+
+)
+
 CREATE TABLE recetas_cocciones (
     receta_id INT,
     cocciones_id INT,
