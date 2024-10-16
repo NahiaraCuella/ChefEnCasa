@@ -82,15 +82,16 @@ CREATE TABLE recetas_cocciones(
 CREATE TABLE recetas_ingredientes(
     receta_id INT,
     ingredientes_id INT,
-    PRIMARY KEY (receta_id,CREATE TABLE recetas_cocciones(
-    receta_id INT,
-    cocciones_id INT,
     PRIMARY KEY (receta_id,ingredientes_id),
     FOREIGN KEY (ingredientes_id) REFERENCES ingredientes(id),
-    FOREIGN KEY (receta_id) REFERENCES recetas(id),
-)
-),
- 
+    FOREIGN KEY (receta_id) REFERENCES recetas(id)
+    
+CREATE TABLE recetas_cocciones (
+    receta_id INT,
+    cocciones_id INT,
+    PRIMARY KEY (receta_id,cocciones_id),
+    FOREIGN KEY (cocciones_id) REFERENCES coccion(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id), 
 )
 
 
