@@ -45,21 +45,54 @@ CREATE TABLE ingredientes (
 CREATE TABLE recetas(
     cantidad_de_personas INT,
     paso_a_paso TEXT,
-    tipo_de_dificultad CHAR(3),
+    tipo_de_dificultad INT,
     id INT PRIMARY KEY AUTO_INCREMENT,
     pais_id INT,
     user_id INT,
-    ingredientes_id INT,
-    cocciones_id INT,
-    momentoDia_id INT,
-    dietas_id INT,
+    
     FOREIGN KEY (pais_id) REFERENCES pais(id),
     FOREIGN KEY (user_id) REFERENCES usuario(id),
-    FOREIGN KEY (ingredientes_id) REFERENCES ingredientes(ID),
-    FOREIGN KEY (cocciones_id) REFERENCES coccion(id),
-    FOREIGN KEY (momentoDia_id) REFERENCES momentos_dias(id),
-    FOREIGN KEY (dietas_id) REFERENCES dietas(id)
 )
+    
+
+CREATE TABLE recetas_por_dieta(
+    receta_id INT,
+    dieta_id INT,
+    PRIMARY KEY (receta_id,dieta_id),
+    FOREIGN KEY (dieta_id) REFERENCES dietas(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id),
+)
+
+CREATE TABLE recetas_por_momento_de_dia(
+    receta_id INT,
+    momentoDia_id INT,
+    PRIMARY KEY (receta_id,momentoDia_id),
+    FOREIGN KEY (momentoDia_id) REFERENCES momentoDia(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id),
+)
+
+CREATE TABLE recetas_cocciones(
+    receta_id INT,
+    cocciones_id INT,
+    PRIMARY KEY (receta_id,cocciones_id),
+    FOREIGN KEY (cocciones_id) REFERENCES cocciones(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id),
+)
+
+CREATE TABLE recetas_ingredientes(
+    receta_id INT,
+    ingredientes_id INT,
+    PRIMARY KEY (receta_id,CREATE TABLE recetas_cocciones(
+    receta_id INT,
+    cocciones_id INT,
+    PRIMARY KEY (receta_id,ingredientes_id),
+    FOREIGN KEY (ingredientes_id) REFERENCES ingredientes(id),
+    FOREIGN KEY (receta_id) REFERENCES recetas(id),
+)
+),
+ 
+)
+
 
 CREATE TABLE medidas (
     id INT PRIMARY KEY,
@@ -105,6 +138,7 @@ INSERT INTO dietas (nombre_de_recetas)
 VALUES ('Vegana'),
        ('Fitness'),
        ('Sin T.A.C.C');
+
 
 UPDATE dietas
 SET nombre_de_recetas = 'Vegetariana'
@@ -199,6 +233,12 @@ ALTER TABLE medidas DROP FOREIGN KEY medidas_ibfk_1;
 
 ALTER TABLE nombre_tabla
 DROP COLUMN columna;
+
+
+INSERT INTO dificultades (tipo_de_dificultad)
+VALUES ('Facil'),
+       ('Medio'),
+       ('Dificl');
 
 //
 =======
