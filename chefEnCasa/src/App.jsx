@@ -1,15 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import { useEffect, useState } from "react";
 import Card from "./components/card";
 import Header from "./components/header";
-import HomePage from "./components/pagina";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/usuarios/1")
+      .then((data) => data.json())
+      .then((data) => console.log(data));
+  }, []);
   return (
     <>
-      <HomePage />
       <Card />
       <Header />
     </>
