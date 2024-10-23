@@ -111,3 +111,5 @@ def borrar_usuario(id):
 
     resultado = {"resultado" : "ok", "mensaje" : "usuario borrado"}
     return jsonify(resultado)
+
+@app.route('/', methods = '')
