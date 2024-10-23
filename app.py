@@ -62,8 +62,6 @@ def conectar_recetas(id):
     result = cursor.execute(user, (id,))
     recetas = cursor.fetchall()
     
-
-
     # Cerrar la conexión
     cursor.close()
     conn.close()
@@ -93,4 +91,23 @@ def agregar_usuario():
     resultado = { "resultado" : "ok", "mensaje" : "se agregó el usuario"}
     return jsonify(resultado)
 
+@app.route('/usuarios/<int:id>', methods=('DELETE',))
+def borrar_usuario(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
 
+    consulta = """
+    DELETE FROM recetas WHERE user_id = %s
+    """
+    cursor.execute(consulta,(id,))
+    consulta2 = """
+    DELETE FROM usuario WHERE id = %s
+    """
+    cursor.execute(consulta2,(id,))
+    conn.commit()
+
+    cursor.close()
+    conn.close()
+
+    resultado = {"resultado" : "ok", "mensaje" : "usuario borrado"}
+    return jsonify(resultado)
