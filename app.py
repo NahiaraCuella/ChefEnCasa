@@ -113,3 +113,23 @@ def borrar_usuario(id):
     return jsonify(resultado)
 
 @app.route('/', methods = '')
+
+
+///
+
+@app.route('/ingredientes/<int:id>', methods=('GET',))
+def obtener_ingrediente(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """
+    SELECT * FROM ingredientes WHERE id = %s
+    """
+    cursor.execute(consulta, (id,))
+    ingrediente = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+    resultado = {"resultado": "ok"}
+    return jsonify(resultado)
+
