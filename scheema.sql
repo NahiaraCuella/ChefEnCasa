@@ -228,7 +228,19 @@ ALTER TABLE medidas DROP FOREIGN KEY medidas_ibfk_1;
 
 ALTER TABLE nombre_tabla
 DROP COLUMN columna;
+--elimine foreing key
+ALTER TABLE rec_ing
+DROP FOREIGN KEY fk_medidas_id;
+--referencie la foreing key nuevamente
+ALTER TABLE rec_ing
+ADD CONSTRAINT medidas_id
+FOREIGN KEY (medidas_id) REFERENCES medidas(id);
 
+ALTER TABLE recetas
+CHANGE COLUMN cantidad_de_personas porciones int;
+
+ALTER TABLE medidas
+CHANGE COLUMN recetas medidas VARCHAR(50) ;
 
 INSERT INTO dificultades (tipo_de_dificultad)
 VALUES ('Facil'),
@@ -267,3 +279,11 @@ WHERE id = 2;
 
 INSERT INTO pais (nombre) 
 VALUES ("Inglaterra")
+
+INSERT INTO medidas(medidas)
+VALUES("kilogramos"),
+	   ("gramos"), 
+       ("litros"),
+       ("mililitros"),
+       ("miligramos");
+       

@@ -1,9 +1,11 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS  # Importa CORS
 import mysql.connector
 
 db_file = "chefencasa.db"
 
 app = Flask(__name__)
+CORS(app)  # Aplica CORS a toda la aplicación
 
 def conectarseABaseDeDatos():
     return mysql.connector.connect(
@@ -42,8 +44,6 @@ def detalle_usuario(id):
     result = cursor.execute(user, (id,))
     usuario = cursor.fetchone()
     
-
-
     # Cerrar la conexión
     cursor.close()
     conn.close()
@@ -111,5 +111,28 @@ def borrar_usuario(id):
 
     resultado = {"resultado" : "ok", "mensaje" : "usuario borrado"}
     return jsonify(resultado)
+<<<<<<< HEAD
 
 @app.route('/', methods = '')
+
+
+///
+
+@app.route('/ingredientes/<int:id>', methods=('GET',))
+def obtener_ingrediente(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """
+    SELECT * FROM ingredientes WHERE id = %s
+    """
+    cursor.execute(consulta, (id,))
+    ingrediente = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+    resultado = {"resultado": "ok"}
+    return jsonify(resultado)
+
+=======
+>>>>>>> fc3f5d124910bd94481ef938e242f748c4fc8cf4
