@@ -111,12 +111,8 @@ def borrar_usuario(id):
 
     resultado = {"resultado" : "ok", "mensaje" : "usuario borrado"}
     return jsonify(resultado)
-<<<<<<< HEAD
-
-@app.route('/', methods = '')
 
 
-///
 
 @app.route('/ingredientes/<int:id>', methods=('GET',))
 def obtener_ingrediente(id):
@@ -127,12 +123,26 @@ def obtener_ingrediente(id):
     SELECT * FROM ingredientes WHERE id = %s
     """
     cursor.execute(consulta, (id,))
-    ingrediente = cursor.fetchone()
+    consulta = cursor.fetchone()
 
     cursor.close()
     conn.close()
     resultado = {"resultado": "ok"}
     return jsonify(resultado)
 
-=======
->>>>>>> fc3f5d124910bd94481ef938e242f748c4fc8cf4
+@app.route('/recetas/<int:id>', methods=('DELETE',))
+def borrar_recetas(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """
+    DELETE FROM recetas WHERE user_id = %s
+    """
+    cursor.execute(consulta,(id,))
+    conn.commit()
+
+    cursor.close()
+    conn.close()
+
+    resultado = {"resultado" : "ok", "mensaje" : "receta borrado"}
+    return jsonify(resultado)
