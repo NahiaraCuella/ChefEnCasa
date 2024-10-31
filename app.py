@@ -127,11 +127,11 @@ def obtener_ingrediente(id):
     SELECT * FROM ingredientes WHERE id = %s
     """
     cursor.execute(consulta, (id,))
-    ingrediente = cursor.fetchone()
+    consulta = cursor.fetchone()
 
     cursor.close()
     conn.close()
-    resultado = {"resultado": "ok"}
+    resultado = consulta
     return jsonify(resultado)
 
 =======
