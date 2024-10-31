@@ -286,4 +286,12 @@ VALUES("kilogramos"),
        ("litros"),
        ("mililitros"),
        ("miligramos");
+
+DELETE FROM ingredientes WHERE tipo_de_ingrediente = 'Carnes';
+
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Fideo'),
+    	('Pollo'),
+    	('Tomate'),
+    	('Cebolla');
        
