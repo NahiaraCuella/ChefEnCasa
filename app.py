@@ -127,7 +127,7 @@ def obtener_ingrediente(id):
 
     cursor.close()
     conn.close()
-    resultado = {"resultado": "ok"}
+    resultado = consulta
     return jsonify(resultado)
 
 @app.route('/recetas/<int:id>', methods=('DELETE',))
