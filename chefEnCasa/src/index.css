@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 4.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -22,25 +22,7 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-.busqueda {
-  color: #ffffff; /* Cambia el color del texto */
-  background-color: #f0f0f0; /* Cambia el color de fondo */
-  border: 1px solid #ccc; /* Cambia el color del borde */
-  padding: 5px; /* Agrega un poco de espacio interno */
-  border-radius: 5px; /* Bordes redondeados */
-  width: 300px; /* Ajusta el ancho a 300 píxeles */
-}
-
-.busqueda::placeholder {
-  color: #ffffff; /* Cambia el color del texto del placeholder */
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/*
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -72,7 +54,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
+*/
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -85,7 +67,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #0004ff;
+  border-color: #0a3fa1;
 }
 button:focus,
 button:focus-visible {

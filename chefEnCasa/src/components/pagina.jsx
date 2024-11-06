@@ -1,6 +1,6 @@
 import "./pagina.css";
 
-export default function HomePage() {
+export default function Boton() {
   return (
     <div className="caja">
       <div className="alineamiento-botones">
@@ -12,9 +12,9 @@ export default function HomePage() {
         </div>
       </div>
       <header className="alineamiento_header">
-        <h1>Chef En Casa</h1>
+        <h1 className="titulo">Chef En Casa</h1>
         <div>
-          <input type="text" placeholder="buscar..." />
+          <input className="busqueda" type="text" placeholder="buscar..." />
           <button>🍳</button>
         </div>
       </header>

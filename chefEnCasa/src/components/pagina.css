@@ -16,12 +16,23 @@
   position: relative; /* Esto permite que los elementos hijos usen posición absoluta con respecto a este contenedor */
 }
 
+.alineamiento-boton-login {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 1rem;
+  left: 75rem;
+  border-radius: 5px;
+  font-size: 25px; /* Aumenta el tamaño de la fuente */
+}
+
 .alineamiento-boton-pais {
   display: flex;
   justify-content: end;
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 70rem;
+  font-size: 25px; /* Aumenta el tamaño de la fuente */
 }
 
 boton #root {
@@ -101,4 +112,22 @@ boton #root {
     -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.busqueda {
+  color: #ffffff; /* Cambia el color del texto */
+  background-color: #ffffff; /* Cambia el color de fondo */
+  border: 1px solid #ccc; /* Cambia el color del borde */
+  padding: 5px; /* Agrega un poco de espacio interno */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 300px; /* Ajusta el ancho a 300 píxeles */
+}
+
+.busqueda::placeholder {
+  color: #3b3939; /* Cambia el color del texto del placeholder */
+}
+
+.titulo {
+  font-size: 58px;
+  margin-bottom: -3%;
 }
