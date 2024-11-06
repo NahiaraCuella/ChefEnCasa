@@ -295,3 +295,11 @@ VALUES ('Fideo'),
     	('Tomate'),
     	('Cebolla');
        
+
+INSERT INTO recetas_por_momento_de_dia (receta_id,momentoDia_id)
+VALUES (8,1),
+       (6,2),
+       (7,3),
+       (8,4),
+       (8,5),
+       (8,6);
