@@ -189,3 +189,47 @@ def obtener_cocciones(id):
     return jsonify(resultado)
 
 
+@app.route('/dietas/<int:id>', methods=('GET',))
+def obtener_dietas (id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """
+    SELECT * FROM recetas WHERE dietas_id = %s
+    """
+    cursor.execute(consulta, (id,))
+    resultado = cursor.fetchall()
+
+    # Si no se encuentran resultados, devuelve un error 404
+    if not resultado:
+        return jsonify({"error": "No se encontraron recetas para este tipo de dieta"}), 404
+    
+    cursor.close()
+    conn.close()
+    
+    return jsonify(resultado)
+
+@app.route('/momentos_dias/<int:id>', methods=('GET',))
+def obtener_recetas_por_momento(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """
+    SELECT * FROM recetas WHERE momentoDia_id = %s
+    """
+    cursor.execute(consulta, (id,))
+    resultado = cursor.fetchall()
+
+    # Si no se encuentran resultados, devuelve un error 404
+    if not resultado:
+        return jsonify({"error": "No se encontraron recetas para este momento del día"}), 404
+    
+    cursor.close()
+    conn.close()
+    
+    return jsonify(resultado)
+
+
+
+
+
