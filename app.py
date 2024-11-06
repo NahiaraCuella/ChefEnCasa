@@ -128,6 +128,8 @@ def obtener_ingrediente(id):
     cursor.close()
     conn.close()
     resultado = consulta
+    if resultado is None:
+        return jsonify({"error": "No se encontraron resultados"}), 404
     return jsonify(resultado)
 
 @app.route('/recetas/<int:id>', methods=('DELETE',))
@@ -146,3 +148,44 @@ def borrar_recetas(id):
 
     resultado = {"resultado" : "ok", "mensaje" : "receta borrado"}
     return jsonify(resultado)
+
+@app.route('/ingredientes/', methods=('POST',))
+def agregar_ingredientes():
+    conn = conectarseABaseDeDatos()
+    tipo_de_ingrediente = request.json["tipo_de_ingrediente"]
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """ 
+    INSERT INTO ingredientes(tipo_de_ingrediente) VALUES (%s)
+    """
+    cursor.execute(consulta, (tipo_de_ingrediente, ))
+    conn.commit()
+    
+    cursor.close()
+    conn.close()
+
+    resultado = {"resultado": "ok", "mensaje" : "ingrediente agregado"}
+    return jsonify(resultado)
+
+
+@app.route('/cocciones/<int:id>', methods=('GET',))
+def obtener_cocciones(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+
+    consulta = """
+    SELECT * FROM recetas WHERE cocciones_id = %s
+    """
+    cursor.execute(consulta, (id,))
+    resultado = cursor.fetchone()
+
+  # Si no se encuentra el registro, devuelve un error 404
+    if resultado is None:
+        return jsonify({"error": "No se encontraron resultados"}), 404
+    
+    cursor.close()
+    conn.close()
+    
+    return jsonify(resultado)
+
+
