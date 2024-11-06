@@ -188,4 +188,21 @@ def obtener_cocciones(id):
     
     return jsonify(resultado)
 
+# Ruta para obtener una receta por su ID
+@app.route('/receta/<int:id>', methods=['GET'])
+def get_receta(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute('SELECT * FROM recetas WHERE id = %s', (id,))  # Consulta con parámetro de ID
+    receta = cursor.fetchone()  # Obtener una receta por su ID
+    
+    cursor.close()
+    conn.close()
+    
+    if receta is None:
+        return jsonify({'error': 'Receta no encontrada'}), 404
+    return jsonify(receta)  # Devuelve la receta como JSON
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
