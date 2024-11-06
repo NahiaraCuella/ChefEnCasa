@@ -11,4 +11,10 @@
   border-radius: 10px;
   margin-top: 70px; /* Agrega un margen de 20px arriba de la imagen */
   gap: 2%;
+  transition: transform 0.3s ease; /* Transición suave para el cambio de escala */
+  cursor: pointer;
+}
+
+.image:hover {
+  transform: scale(1.1); /* Aplica el scale(1.1) al pasar el mouse */
 }
