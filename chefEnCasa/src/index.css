@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  text-align: center; 
+  text-align: center;
   background-color: #49abe4;
 
   font-synthesis: none;
@@ -24,25 +24,22 @@ a:hover {
 }
 
 .busqueda {
-  color: #333; /* Cambia el color del texto */
+  color: #ffffff; /* Cambia el color del texto */
   background-color: #f0f0f0; /* Cambia el color de fondo */
   border: 1px solid #ccc; /* Cambia el color del borde */
   padding: 5px; /* Agrega un poco de espacio interno */
   border-radius: 5px; /* Bordes redondeados */
-    width: 300px; /* Ajusta el ancho a 300 píxeles */
-  
+  width: 300px; /* Ajusta el ancho a 300 píxeles */
 }
 
 .busqueda::placeholder {
-  color: #000000; /* Cambia el color del texto del placeholder */
+  color: #ffffff; /* Cambia el color del texto del placeholder */
 }
-
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 
 button {
   border-radius: 8px;
@@ -75,8 +72,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-
 
 button {
   border-radius: 8px;

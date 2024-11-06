@@ -11,14 +11,14 @@
 }
 
 .alineamiento-botones {
-  /*display: flex;
-  justify-content: end;*/
+  display: flex;
+  justify-content: end;
   position: relative; /* Esto permite que los elementos hijos usen posición absoluta con respecto a este contenedor */
 }
 
 .alineamiento-boton-pais {
-  /*display: flex;
-  justify-content: end;*/
+  display: flex;
+  justify-content: end;
   position: absolute;
   top: 1rem;
   left: 1rem;
