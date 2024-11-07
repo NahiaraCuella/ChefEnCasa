@@ -73,6 +73,10 @@ const RecipeSlider = () => {
           <p>{recipe.ingredients}</p>
           <h3>Instrucciones:</h3>
           <p>{recipe.paso_a_paso}</p>
+          <h3>Tipo de dificulta:</h3>
+          <p>{recipe.tipo_de_difilcuta}</p>
+          <h3>Tiempo de coccion:</h3>
+          <p>{recipe.tiempo_coccion}</p>
         </div>
       ) : (
         <>no se encontraros los detalles </>
