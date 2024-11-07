@@ -122,6 +122,13 @@ INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
        ('jorge','jorge@gmail.com','777','Ingles'),
        ('rosa','rosa@gmail.com','222','Español');
+
+
+
+
+INSERT INTO rec_ing (recetas_id, ingredientes_id, medidas_id) 
+VALUES (6, 9, 3), (7, 2, 2), (8, 3, 1);
+
 UPDATE usuario
 SET contrasenia = '123'
 WHERE id = '4';
