@@ -310,3 +310,26 @@ VALUES (8,1),
        (8,4),
        (8,5),
        (8,6);
+       
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES  ('Azucar'),
+        ('Aceite'),
+         ('Leche'),
+        ('Harina Leudante'),
+        ('Esencia de Vainilla'),
+        ('Pimienta'),
+        ('Sal'),
+        ('Manteca'),
+        ('Carne'),
+        ('Orégano'),
+        ('Comino'),
+        ('Queso Rallado'),
+        ('Pimentón'),
+        ('Salchicha'),
+        ('Ajo'),
+        ('Caldo de Verduras'),
+        ('Fideos'),
+        ('Albahaca')
+        ;
+
+
