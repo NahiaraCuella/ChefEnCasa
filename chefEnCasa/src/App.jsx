@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import Card from "./components/card";
-import Header from "./components/header";
+import Header from "./components/Header";
 
 import Boton from "./components/pagina";
 
