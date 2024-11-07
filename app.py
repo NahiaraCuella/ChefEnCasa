@@ -4,6 +4,8 @@ import mysql.connector
 
 db_file = "chefencasa.db"
 
+
+
 app = Flask(__name__)
 CORS(app)  # Aplica CORS a toda la aplicación
 
@@ -34,7 +36,6 @@ def usuario():
 @app.route('/usuarios/<int:id>')
 def detalle_usuario(id):
     # Conectar a la base de datos
-    # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
     
@@ -53,7 +54,6 @@ def detalle_usuario(id):
 
 @app.route('/recetas-por-usuario/<int:id>')
 def conectar_recetas(id):
-    # Conectar a la base de datos
     # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)

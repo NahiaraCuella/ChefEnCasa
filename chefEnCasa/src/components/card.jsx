@@ -11,11 +11,11 @@ const RecipeSlider = () => {
   const recipes = [
     {
       id: 8,
-      img: "./public/hotcakes.jpg",
+      img: "/hotcakes.jpg",
       title: "Hotckes",
     },
-    { id: 2, img: "./public/f.jpg", title: "Fideos con tuco" },
-    { id: 3, img: "./public/p.avif", title: "Fideos con salsa y salchicha" },
+    { id: 7, img: "/f.jpg", title: "Fideos con tuco" },
+    { id: 6, img: "/p.avif", title: "Fideos con salsa y salchicha" },
   ];
 
   // Función para obtener la receta por ID desde la API Flask usando fetch
@@ -69,12 +69,11 @@ const RecipeSlider = () => {
         <div className="recipe-details">
           <h2>{recipe.nombre_receta}</h2>
           <img src={recipe.image_url} alt={recipe.title} />
-          <h3>Ingredientes:</h3>
-          <p>{recipe.ingredients}</p>
+
           <h3>Instrucciones:</h3>
           <p>{recipe.paso_a_paso}</p>
           <h3>Tipo de dificulta:</h3>
-          <p>{recipe.tipo_de_difilcuta}</p>
+          <p>{recipe.tipo_de_dificultad}</p>
           <h3>Tiempo de coccion:</h3>
           <p>{recipe.tiempo_coccion}</p>
         </div>
