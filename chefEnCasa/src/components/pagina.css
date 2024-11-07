@@ -132,28 +132,58 @@ boton #root {
   margin-bottom: -3%;
 }
 
-<<<<<<< HEAD
-/*
+
 #country-btn {
-  font-size: 30px;
+  /*
+    font-size: 50px; /* Aumentar el tamaño del emoji 
+    padding: 5px;
+    cursor: pointer;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block;*/
+
+/*
+display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 1rem;
+  left: 75rem;
+  border-radius: 5px;
+  font-size: 25px; /* Aumenta el tamaño de la fuente */
+*/
+      position: absolute;
+      font-size: 20px; /* Reducir el tamaño del emoji (más pequeño que antes) */
+      padding: 5px 10px; /* Reducir el espacio alrededor del emoji */
+      width: 55px; /* Establecer un ancho fijo para el botón */
+      height: 45px; /* Establecer una altura fija para el botón */
+      cursor: pointer;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      background-color: white;
+      display: inline-block;
+      text-align: center; /* Asegura que el emoji esté centrado en el botón */
+/*  font-size: 15px;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 5px solid #ffffff;
   border-radius: 5px;
   background-color: white;
-  display: inline-block;
+  display: flex;
+  width: 50px; /* Ajusta el ancho a 300 píxeles */
 }
 
-/* Estilo para el menú de países */
 .country-menu {
   position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   padding: 10px;
   list-style-type: none;
-  margin-top: 5px;
+  margin-top: 65px;
+  color: #000000;
+  font-size: 15px;
 }
 
 .country-menu ul {
@@ -168,8 +198,6 @@ boton #root {
 }
 
 .country-menu li:hover {
-  background-color: #f1f1f1;
+  background-color: #e6e5e5;
 }
-*/
-=======
->>>>>>> 3439a6eb2ac0a62aa11f5d016363d09416b42867
+

@@ -15,7 +15,6 @@ function App() {
     <>
       <Boton />
       <Card />
-      <Header />
     </>
   );
 }

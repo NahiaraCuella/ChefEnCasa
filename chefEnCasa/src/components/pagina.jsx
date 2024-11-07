@@ -1,4 +1,4 @@
-import "./pagina.css";
+/*import "./pagina.css";
 
 
 export default function Boton() {
@@ -21,9 +21,9 @@ export default function Boton() {
      </header>
    </div>
  );
-}
+}*/
 
-/*
+
 import React, { useState, useEffect } from "react";
 import "./pagina.css";
 
@@ -96,4 +96,4 @@ export default function Boton() {
         </div>
       );
     }
-*/
+
