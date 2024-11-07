@@ -333,6 +333,7 @@ VALUES  ('Azucar'),
         ;
 
 
+<<<<<<< HEAD
 UPDATE recetas
 SET rec_ing = 6
 WHERE ingredientes_id = 9;
@@ -344,3 +345,80 @@ WHERE ingredientes_id = 2;
 UPDATE recetas
 SET rec_ing = 7
 WHERE ingredientes_id = 3;
+=======
+
+
+
+
+UPDATE ingredientes
+SET id = 7
+WHERE id = 14;
+
+UPDATE ingredientes
+SET id = 8
+WHERE id = 15;
+
+UPDATE ingredientes
+SET id = 9
+WHERE id = 16;
+
+UPDATE ingredientes
+SET id = 10
+WHERE id = 17;
+
+UPDATE ingredientes
+SET id = 11
+WHERE id = 18;
+
+UPDATE ingredientes
+SET id = 12
+WHERE id = 19;
+
+UPDATE ingredientes
+SET id = 13
+WHERE id = 20;
+
+UPDATE ingredientes
+SET id = 14
+WHERE id = 21;
+
+UPDATE ingredientes
+SET id = 15
+WHERE id = 22;
+
+UPDATE ingredientes
+SET id = 16
+WHERE id = 23;
+
+UPDATE ingredientes
+SET id = 17
+WHERE id = 24;
+
+UPDATE ingredientes
+SET id = 18
+WHERE id = 25;
+
+UPDATE ingredientes
+SET id = 19
+WHERE id = 26;
+
+UPDATE ingredientes
+SET id = 20
+WHERE id = 27;
+
+UPDATE ingredientes
+SET id = 21
+WHERE id = 28;
+
+UPDATE ingredientes
+SET id = 22
+WHERE id = 29;
+
+UPDATE ingredientes
+SET id = 23
+WHERE id = 30;
+
+UPDATE ingredientes
+SET id = 24
+WHERE id = 31;
+
