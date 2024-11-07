@@ -333,3 +333,14 @@ VALUES  ('Azucar'),
         ;
 
 
+UPDATE recetas
+SET rec_ing = 6
+WHERE ingredientes_id = 9;
+
+UPDATE recetas
+SET rec_ing = 7
+WHERE ingredientes_id = 2;
+
+UPDATE recetas
+SET rec_ing = 7
+WHERE ingredientes_id = 3;
