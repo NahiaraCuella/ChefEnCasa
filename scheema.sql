@@ -122,6 +122,13 @@ INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
        ('jorge','jorge@gmail.com','777','Ingles'),
        ('rosa','rosa@gmail.com','222','Español');
+
+
+
+
+INSERT INTO rec_ing (recetas_id, ingredientes_id, medidas_id) 
+VALUES (6, 9, 3), (7, 2, 2), (8, 3, 1);
+
 UPDATE usuario
 SET contrasenia = '123'
 WHERE id = '4';
@@ -331,4 +338,93 @@ SET paso_a_paso = '1.	Preparar la mezcla: En una licuadora o procesador de alime
 	2.	Cocinar los hotcakes: Calienta una sartén antiadherente a fuego medio y añade un poco de aceite de coco o mantequilla. Vierte la mezcla en la sartén en pequeñas porciones (aproximadamente 2-3 cucharadas de mezcla por hotcake). Cocina durante 2-3 minutos, hasta que aparezcan burbujas en la superficie, luego voltea con cuidado y cocina durante otro minuto o hasta que estén dorados.
 	3.	Servir: Sirve los hotcakes calientes, agregando las frutas frescas encima o dentro de la mezcla antes de cocinar, y si deseas, acompáñalos con miel, o yogur griego.'
 WHERE id = 8;
+
+<<<<<<< HEAD
+UPDATE recetas
+SET rec_ing = 6
+WHERE ingredientes_id = 9;
+
+UPDATE recetas
+SET rec_ing = 7
+WHERE ingredientes_id = 2;
+
+UPDATE recetas
+SET rec_ing = 7
+WHERE ingredientes_id = 3;
+=======
+
+
+
+
+UPDATE ingredientes
+SET id = 7
+WHERE id = 14;
+
+UPDATE ingredientes
+SET id = 8
+WHERE id = 15;
+
+UPDATE ingredientes
+SET id = 9
+WHERE id = 16;
+
+UPDATE ingredientes
+SET id = 10
+WHERE id = 17;
+
+UPDATE ingredientes
+SET id = 11
+WHERE id = 18;
+
+UPDATE ingredientes
+SET id = 12
+WHERE id = 19;
+
+UPDATE ingredientes
+SET id = 13
+WHERE id = 20;
+
+UPDATE ingredientes
+SET id = 14
+WHERE id = 21;
+
+UPDATE ingredientes
+SET id = 15
+WHERE id = 22;
+
+UPDATE ingredientes
+SET id = 16
+WHERE id = 23;
+
+UPDATE ingredientes
+SET id = 17
+WHERE id = 24;
+
+UPDATE ingredientes
+SET id = 18
+WHERE id = 25;
+
+UPDATE ingredientes
+SET id = 19
+WHERE id = 26;
+
+UPDATE ingredientes
+SET id = 20
+WHERE id = 27;
+
+UPDATE ingredientes
+SET id = 21
+WHERE id = 28;
+
+UPDATE ingredientes
+SET id = 22
+WHERE id = 29;
+
+UPDATE ingredientes
+SET id = 23
+WHERE id = 30;
+
+UPDATE ingredientes
+SET id = 24
+WHERE id = 31;
 
