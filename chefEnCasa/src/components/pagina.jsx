@@ -23,11 +23,12 @@ export default function Boton() {
 }
 
 /*
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import "./pagina.css";
 
-const MyComponent = () => {
+export default function Boton() {
   // Estado para el país seleccionado (emoji)
-  const [selectedCountry, setSelectedCountry] = useState('🇦🇷'); // Default: Argentina
+  const [selectedCountry, setSelectedCountry] = useState('🇦🇷');
   // Estado para mostrar u ocultar el menú de países
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
@@ -51,7 +52,7 @@ const MyComponent = () => {
   };
 
   // Hook para manejar el clic fuera del componente
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
@@ -93,8 +94,5 @@ const MyComponent = () => {
           </header>
         </div>
       );
-    };
-    
-    export default MyComponent;
-    
+    }
 */

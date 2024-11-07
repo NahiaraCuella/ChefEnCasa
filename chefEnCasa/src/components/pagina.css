@@ -133,8 +133,17 @@ boton #root {
 }
 
 /*
-/* Estilos para el menú de países */
-/*
+#country-btn {
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-block;
+}
+
+/* Estilo para el menú de países */
 .country-menu {
   position: absolute;
   background-color: white;
