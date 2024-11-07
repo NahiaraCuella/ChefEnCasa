@@ -247,6 +247,26 @@ def obtener_recetas_por_momento(id):
     return jsonify(resultado)
 
 
+@app.route('/search/<int:id>', methods=('GET',))
+def obtener_recetas(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+    # Obtener el parámetro de búsqueda desde la URL
+    search_query = request.args.get('q', '')  # 'q' es el parámetro de búsqueda
+    
+    consulta = """
+    SELECT * FROM recetas
+    WHERE nombre LIKE %s OR descripcion LIKE %s    
+    """
+    cursor.execute(consulta, (f'%{search_query}%', f'%{search_query}%'))    
+    resultado = cursor.fetchall()
 
-
+    # Si no se encuentran resultados, devuelve un error 404
+    if not resultado:
+        return jsonify({"error": "No se encontraron recetas para este momento del día"}), 404
+    
+    cursor.close()
+    conn.close()
+    
+    return jsonify(resultado)
 

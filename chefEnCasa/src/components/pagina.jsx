@@ -1,6 +1,7 @@
 import "./pagina.css";
 
 export default function Boton() {
+  
   return (
     <div className="caja">
       <div className="alineamiento-botones">
