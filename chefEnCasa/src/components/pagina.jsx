@@ -23,16 +23,12 @@ export default function Boton() {
  );
 }*/
 
-
 import React, { useState, useEffect } from "react";
 import "./pagina.css";
 
 export default function Boton() {
-<<<<<<< HEAD
-  
-=======
   // Estado para el país seleccionado (emoji)
-  const [selectedCountry, setSelectedCountry] = useState('🇦🇷');
+  const [selectedCountry, setSelectedCountry] = useState("🇦🇷");
   // Estado para mostrar u ocultar el menú de países
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
@@ -50,20 +46,22 @@ export default function Boton() {
 
   // Función para cerrar el menú si se hace clic fuera
   const handleClickOutside = (event) => {
-    if (!event.target.closest('.country-menu') && !event.target.closest('#country-btn')) {
+    if (
+      !event.target.closest(".country-menu") &&
+      !event.target.closest("#country-btn")
+    ) {
       setIsMenuVisible(false); // Cerrar el menú si el clic es fuera del área del menú o botón
     }
   };
 
   // Hook para manejar el clic fuera del componente
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
->>>>>>> 7e4c15c05b1b587e1e7b5a423902a0387a850daf
   return (
     <div className="caja">
       <div className="alineamiento-botones">
@@ -71,33 +69,29 @@ export default function Boton() {
           <button id="login-btn">👤</button>
         </div>
         <div className="alineamiento-boton-pais">
-          <button
-            id="country-btn"
-            onClick={handleCountryClick}
-          >
+          <button id="country-btn" onClick={handleCountryClick}>
             {selectedCountry}
           </button>
           {isMenuVisible && (
             <div className="country-menu">
               <ul>
-                <li onClick={() => handleCountrySelect('🇦🇷')}>Argentina</li>
-                <li onClick={() => handleCountrySelect('🇧🇷')}>Brasil</li>
-                <li onClick={() => handleCountrySelect('🇨🇱')}>Chile</li>
-                <li onClick={() => handleCountrySelect('🇲🇽')}>México</li>
-                <li onClick={() => handleCountrySelect('🇪🇸')}>España</li>
-                </ul>
-                </div>
-              )}
+                <li onClick={() => handleCountrySelect("🇦🇷")}>Argentina</li>
+                <li onClick={() => handleCountrySelect("🇧🇷")}>Brasil</li>
+                <li onClick={() => handleCountrySelect("🇨🇱")}>Chile</li>
+                <li onClick={() => handleCountrySelect("🇲🇽")}>México</li>
+                <li onClick={() => handleCountrySelect("🇪🇸")}>España</li>
+              </ul>
             </div>
-          </div>
-          <header className="alineamiento_header">
-            <h1 className="titulo">Chef En Casa</h1>
-            <div>
-              <input className="busqueda" type="text" placeholder="buscar..." />
-              <button>🍳</button>
-            </div>
-          </header>
+          )}
         </div>
-      );
-    }
-
+      </div>
+      <header className="alineamiento_header">
+        <h1 className="titulo">Chef En Casa</h1>
+        <div>
+          <input className="busqueda" type="text" placeholder="buscar..." />
+          <button>🍳</button>
+        </div>
+      </header>
+    </div>
+  );
+}
