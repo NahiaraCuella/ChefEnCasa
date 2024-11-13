@@ -521,3 +521,46 @@ Este pastel de papa es perfecto para una comida reconfortante y se puede acompa�
 /*agregue ingrdientes*/
 INSERT INTO ingredientes (tipo_de_ingrediente)
 VALUES ('Aceitunas');
+
+/*agregue una receta nueva a la tabla recetas*/
+INSERT INTO recetas (porciones, paso_a_paso, tipo_de_dificultad, id , pais_id, user_id, ingredientes_id, cocciones_id, dietas_id , nombre_receta, tiempo_coccion )
+VALUES ('4','Ingredientes:
+4 filetes de carne (nalga, cuadril o bola de lomo)
+2 huevos
+2 tazas de pan rallado
+1 taza de harina
+Sal y pimienta al gusto
+1 taza de salsa de tomate
+200 g de jamón cocido
+200 g de queso mozzarella o queso para derretir
+Orégano y, opcionalmente, ají molido
+Aceite para freír (o para hornear)
+Preparación:
+1. Preparar las milanesas:
+Sazona los filetes de carne con sal y pimienta.
+Empanado: Pasa cada filete primero por harina (esto ayuda a que el huevo se adhiera mejor), luego por los huevos batidos y finalmente por el pan rallado. Presiona bien para que el pan se adhiera a la carne.
+Reposo: Deja las milanesas empanadas en la heladera por unos 15 minutos para que se adhiera mejor el pan.
+2. Cocinar las milanesas:
+Freír: Calienta aceite en una sartén y fríe las milanesas hasta que estén doradas por ambos lados. Luego colócalas sobre papel absorbente para retirar el exceso de aceite.
+Opción al horno: Si prefieres una versión más ligera, coloca las milanesas en una bandeja para horno, rocíalas con un poco de aceite y cocínalas a 200°C durante unos 10-15 minutos o hasta que estén doradas.
+3. Armado de la milanesa a la napolitana:
+Coloca las milanesas ya cocidas en una bandeja para horno.
+Cubre cada milanesa con una capa de salsa de tomate.
+Coloca encima una rebanada de jamón.
+Añade queso mozzarella o queso para derretir, cubriendo bien la superficie.
+Espolvorea orégano y, si te gusta, una pizca de ají molido para un toque de sabor.
+4. Gratinar en el horno:
+Lleva la bandeja al horno precalentado a 200°C y cocina por unos 10-15 minutos o hasta que el queso esté derretido y dorado.
+5. Servir:
+Sirve caliente, acompañada de papas fritas o puré de papas, y ¡a disfrutar de esta deliciosa milanesa a la napolitana!
+Es una receta clásica, sabrosa y perfecta para compartir en familia.','medio','11','1','6','15','4', '8', 'Milanesa napolitana', '30 min');
+
+
+/*agregue ingredientes*/
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Salsa de tomate'),
+       ('Harina'),
+       ('Jamón'),
+       ('Pan rayado');
+
+
