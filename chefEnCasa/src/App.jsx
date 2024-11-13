@@ -1,7 +1,5 @@
-
 import { useEffect, useState } from "react";
 import Card from "./components/card";
-import Header from "./components/Header";
 
 import Boton from "./components/pagina";
 import Login from "./components/Login";
@@ -22,8 +20,6 @@ function App() {
 }
 
 export default App;
-
-
 
 /*
 import { useState } from 'react'
