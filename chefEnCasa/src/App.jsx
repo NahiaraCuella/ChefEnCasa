@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import Card from "./components/card";
-<<<<<<< HEAD
-=======
-
->>>>>>> c326625196e279aacbc057b35955a1fbbff2244b
 import Boton from "./components/pagina";
 import Login from "./components/Login";
 
@@ -15,7 +11,7 @@ function App() {
   }, []);
   return (
     <>
-    <Login />
+      <Login />
       <Boton />
       <Card />
     </>
