@@ -13,7 +13,7 @@ const FiltroRecetas = () => {
         "harina Leudante",
         "leche",
         "huevo",
-        "Ensecia de Vainilla",
+        "Esencia de Vainilla",
         "Aceite",
         "azúcar",
       ],
@@ -61,9 +61,6 @@ const FiltroRecetas = () => {
             </p>
             <p>
               <strong>Ingredientes:</strong> {receta.ingredientes.join(", ")}
-            </p>
-            <p>
-              <strong>Dificultad:</strong> {receta.dificultad}
             </p>
           </li>
         ))}

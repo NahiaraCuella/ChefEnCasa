@@ -16,6 +16,21 @@ const RecipeSlider = () => {
     },
     { id: 7, img: "/f.jpg", title: "Fideos con tuco" },
     { id: 6, img: "/p.avif", title: "Fideos con salsa y salchicha" },
+    {
+      id: 9,
+      img: "/pastel-de-papas.jpg",
+      title: "Pastel de Papas",
+    },
+    {
+      id: 10,
+      img: "/budin-de-pan.jpg",
+      title: "Bundin de Pan",
+    },
+    {
+      id: 11,
+      img: "M.jpg",
+      title: "Milanesa napolitana con papas fritas",
+    },
   ];
 
   // Función para obtener la receta por ID desde la API Flask usando fetch
