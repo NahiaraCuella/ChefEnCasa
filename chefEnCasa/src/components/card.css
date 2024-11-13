@@ -18,3 +18,18 @@
 .image:hover {
   transform: scale(1.1); /* Aplica el scale(1.1) al pasar el mouse */
 }
+
+h3, p {
+  line-height: 1.9; /* Reduce la altura de las líneas */
+}
+
+body {
+  font-family: Arial, light;
+  font-size: 20px;
+  margin: 20px;
+  align-items: left;
+}
+
+.recipe-details p {
+  white-space: pre-line; /* Respetará los saltos de línea */
+}

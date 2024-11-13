@@ -4,6 +4,8 @@ import mysql.connector
 
 db_file = "chefencasa.db"
 
+
+
 app = Flask(__name__)
 CORS(app)  # Aplica CORS a toda la aplicación
 
@@ -34,7 +36,6 @@ def usuario():
 @app.route('/usuarios/<int:id>')
 def detalle_usuario(id):
     # Conectar a la base de datos
-    # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
     
@@ -53,7 +54,6 @@ def detalle_usuario(id):
 
 @app.route('/recetas-por-usuario/<int:id>')
 def conectar_recetas(id):
-    # Conectar a la base de datos
     # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -188,6 +188,23 @@ def obtener_cocciones(id):
     
     return jsonify(resultado)
 
+# Ruta para obtener una receta por su ID
+@app.route('/receta/<int:id>', methods=['GET'])
+def get_receta(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute('SELECT * FROM recetas WHERE id = %s', (id,))  # Consulta con parámetro de ID
+    receta = cursor.fetchone()  # Obtener una receta por su ID
+    
+    cursor.close()
+    conn.close()
+    
+    if receta is None:
+        return jsonify({'error': 'Receta no encontrada'}), 404
+    return jsonify(receta)  # Devuelve la receta como JSON
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 @app.route('/dietas/<int:id>', methods=('GET',))
 def obtener_dietas (id):
@@ -230,6 +247,26 @@ def obtener_recetas_por_momento(id):
     return jsonify(resultado)
 
 
+@app.route('/search/<int:id>', methods=('GET',))
+def obtener_recetas(id):
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+    # Obtener el parámetro de búsqueda desde la URL
+    search_query = request.args.get('q', '')  # 'q' es el parámetro de búsqueda
+    
+    consulta = """
+    SELECT * FROM recetas
+    WHERE nombre LIKE %s OR descripcion LIKE %s    
+    """
+    cursor.execute(consulta, (f'%{search_query}%', f'%{search_query}%'))    
+    resultado = cursor.fetchall()
 
-
+    # Si no se encuentran resultados, devuelve un error 404
+    if not resultado:
+        return jsonify({"error": "No se encontraron recetas para este momento del día"}), 404
+    
+    cursor.close()
+    conn.close()
+    
+    return jsonify(resultado)
 

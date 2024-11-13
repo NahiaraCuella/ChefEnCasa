@@ -122,6 +122,13 @@ INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
        ('jorge','jorge@gmail.com','777','Ingles'),
        ('rosa','rosa@gmail.com','222','Español');
+
+
+
+
+INSERT INTO rec_ing (recetas_id, ingredientes_id, medidas_id) 
+VALUES (6, 9, 3), (7, 2, 2), (8, 3, 1);
+
 UPDATE usuario
 SET contrasenia = '123'
 WHERE id = '4';
@@ -294,13 +301,49 @@ VALUES ('Fideo'),
     	('Pollo'),
     	('Tomate'),
     	('Cebolla');
+<<<<<<< HEAD
 
+=======
+       
+
+INSERT INTO recetas_por_momento_de_dia (receta_id,momentoDia_id)
+VALUES (8,1),
+       (6,2),
+       (7,3),
+       (8,4),
+       (8,5),
+       (8,6);
+       
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES  ('Azucar'),
+        ('Aceite'),
+         ('Leche'),
+        ('Harina Leudante'),
+        ('Esencia de Vainilla'),
+        ('Pimienta'),
+        ('Sal'),
+        ('Manteca'),
+        ('Carne'),
+        ('Orégano'),
+        ('Comino'),
+        ('Queso Rallado'),
+        ('Pimentón'),
+        ('Salchicha'),
+        ('Ajo'),
+        ('Caldo de Verduras'),
+        ('Fideos'),
+        ('Albahaca')
+        ;
+
+/*modifique los datos de la tabla de recetas  */
+>>>>>>> 69e0607edbedec368c718f55e9489304b3bb5886
 UPDATE recetas
 SET paso_a_paso = '1.	Preparar la mezcla: En una licuadora o procesador de alimentos, agrega la avena, la leche, los huevos, banana (si lo usas), el polvo de hornear, la canela, la esencia de vainilla y la sal. Licúa hasta obtener una mezcla suave y homogénea. Si está muy espesa, puedes añadir un poco más de leche para obtener la consistencia deseada.
 	2.	Cocinar los hotcakes: Calienta una sartén antiadherente a fuego medio y añade un poco de aceite de coco o mantequilla. Vierte la mezcla en la sartén en pequeñas porciones (aproximadamente 2-3 cucharadas de mezcla por hotcake). Cocina durante 2-3 minutos, hasta que aparezcan burbujas en la superficie, luego voltea con cuidado y cocina durante otro minuto o hasta que estén dorados.
 	3.	Servir: Sirve los hotcakes calientes, agregando las frutas frescas encima o dentro de la mezcla antes de cocinar, y si deseas, acompáñalos con miel, o yogur griego.'
 WHERE id = 8;
 
+<<<<<<< HEAD
 /*AGREGUE MAS INGREDIENTES*/
 INSERT INTO ingredientes (ID,tipo_de_ingrediente)
 VALUES ('25','Avena'),
@@ -312,4 +355,143 @@ VALUES ('25','Avena'),
        ('31','Naranja'),
        ('32','Pan'),
        ('33','Canela');
+=======
+<<<<<<< HEAD
+UPDATE recetas
+SET rec_ing = 6
+WHERE ingredientes_id = 9;
+
+UPDATE recetas
+SET rec_ing = 7
+WHERE ingredientes_id = 2;
+
+UPDATE recetas
+SET rec_ing = 7
+WHERE ingredientes_id = 3;
+=======
+
+
+
+
+UPDATE ingredientes
+SET id = 7
+WHERE id = 14;
+
+UPDATE ingredientes
+SET id = 8
+WHERE id = 15;
+
+UPDATE ingredientes
+SET id = 9
+WHERE id = 16;
+
+UPDATE ingredientes
+SET id = 10
+WHERE id = 17;
+
+UPDATE ingredientes
+SET id = 11
+WHERE id = 18;
+
+UPDATE ingredientes
+SET id = 12
+WHERE id = 19;
+
+UPDATE ingredientes
+SET id = 13
+WHERE id = 20;
+
+UPDATE ingredientes
+SET id = 14
+WHERE id = 21;
+
+UPDATE ingredientes
+SET id = 15
+WHERE id = 22;
+
+UPDATE ingredientes
+SET id = 16
+WHERE id = 23;
+
+UPDATE ingredientes
+SET id = 17
+WHERE id = 24;
+
+UPDATE ingredientes
+SET id = 18
+WHERE id = 25;
+
+UPDATE ingredientes
+SET id = 19
+WHERE id = 26;
+
+UPDATE ingredientes
+SET id = 20
+WHERE id = 27;
+
+UPDATE ingredientes
+SET id = 21
+WHERE id = 28;
+
+UPDATE ingredientes
+SET id = 22
+WHERE id = 29;
+
+UPDATE ingredientes
+SET id = 23
+WHERE id = 30;
+
+UPDATE ingredientes
+SET id = 24
+WHERE id = 31;
+>>>>>>> 69e0607edbedec368c718f55e9489304b3bb5886
+
+/*MODIFIQUE una receta de la tabla recetas*/
+UPDATE recetas
+SET paso_a_paso = '1. Preparación de ingredientes
+Corta el ajo y la cebolla lo más finamente posible.
+Si vas a usar carne, córtala en trozos pequeños para que sea fácil de masticar.
+2. Sofreír la cebolla, ajo y carne (opcional)
+Coloca un poco de manteca en una sartén (también puedes usar aceite, pero la manteca le da un sabor diferente).
+Añade el ajo y la cebolla picados, y sofríelos a fuego medio.
+Si tienes carne, agrégala a la sartén y dórala junto con la cebolla y el ajo.
+Cocina hasta que la cebolla esté bien caramelizada y, si usaste carne, verifica que esté bien cocida abriendo un trozo a la mitad.
+3. Incorporar el tomate y hacer la salsa
+Agrega el tomate a la sartén. Si tienes salsa de tomate descongelada, también puedes agregar un poco para enriquecer la mezcla.
+Condimenta a gusto con sal, pimienta, comino, pimentón y orégano.
+Ajusta las especias probando poco a poco; si prefieres un toque picante, añade más pimienta.
+Deja que hierva y, luego, reduce el fuego al mínimo, tapa la sartén y deja que la salsa se cocine a fuego lento.
+4. Cocinar la pasta
+Llena una olla con agua y añade sal (evita agregar aceite al agua).
+Lleva el agua a ebullición y, cuando esté burbujeando, agrega la pasta.
+Cocina la pasta alrededor de 20 minutos o hasta que esté al dente.
+Escurre la pasta y, si deseas, mézclala con un poco de manteca o aceite.
+5. Servir
+Sirve los fideos en un plato y cúbrelos con la salsa.
+Espolvorea con perejil fresco y queso rallado, si prefieres.
+6. Disfrutar
+¡Aprovecha y disfruta del sabor!'
+WHERE id = 7;
+
+/*agregue una receta nueva a la tabla recetas*/
+INSERT INTO recetas (porciones, paso_a_paso, tipo_de_dificultad, id , pais_id, user_id, ingredientes _id, cocciones_id, dietas_id , nombre_receta, tiempo_coccion , rec_ing )
+VALUES ('8','Preparación:
+Preparar el caramelo: En una sartén a fuego medio, colocá el azúcar con unas gotas de agua. Cocina hasta que se disuelva y adquiera un color dorado. Viértelo inmediatamente en el molde donde harás el budín, cubriendo toda la base y las paredes. Deja que se enfríe.
+Preparar el pan: Corta el pan en trozos pequeños y colócalo en un bol grande.
+Remojar el pan: Calienta la leche y viértela sobre el pan troceado. Deja reposar unos minutos hasta que el pan esté bien empapado y blando.
+Batir los ingredientes: Agrega el azúcar, los huevos, la esencia de vainilla y la ralladura de limón o naranja al bol con el pan y la leche. Con una batidora de mano, mezcla todo hasta obtener una mezcla homogénea. Si prefieres una textura más rústica, puedes dejar algunos trozos de pan sin triturar completamente.
+Hornear: Vierte la mezcla en el molde caramelizado. Cocina en horno precalentado a 180°C (350°F) en baño María durante aproximadamente 1 hora, o hasta que al insertar un cuchillo en el centro, éste salga limpio.
+Enfriar y desmoldar: Deja que el budín de pan se enfríe a temperatura ambiente y luego refrigéralo por al menos 2 horas. Para desmoldarlo, pasa un cuchillo por los bordes y da vuelta el molde sobre un plato.
+Sugerencias:
+Sirve el budín de pan frío o a temperatura ambiente, y acompáñalo con un poco de crema batida o dulce de leche si quieres un toque extra de sabor.¡Disfrútalo!','fácil','9','1','4','32','3', '1', 'Budín de pan', '1 hora','4');
+
+/*agregue ingrdientes*/
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Papas'),
+       ('Ají molido'),
+       ('Morrón'),
+       ('Carne picada'),
+       ('Queso'),
+       ('Nuez moscada');
+
 
