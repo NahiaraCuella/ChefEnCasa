@@ -7,7 +7,7 @@
 }
 
 .image {
-  width: 90%; /* La imagen ocupa el 100% del contenedor */
+  width: 30%; /* La imagen ocupa el 100% del contenedor */
   border-radius: 10px;
   margin-top: 70px; /* Agrega un margen de 20px arriba de la imagen */
   gap: 2%;
@@ -19,7 +19,8 @@
   transform: scale(1.1); /* Aplica el scale(1.1) al pasar el mouse */
 }
 
-h3, p {
+h3,
+p {
   line-height: 1.9; /* Reduce la altura de las líneas */
 }
 

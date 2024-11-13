@@ -118,9 +118,9 @@ boton #root {
   color: #000000; /* Cambia el color del texto */
   background-color: #ffffff; /* Cambia el color de fondo */
   border: 1px solid #ccc; /* Cambia el color del borde */
-  padding: 5px; /* Agrega un poco de espacio interno */
+  padding: 15px; /* Agrega un poco de espacio interno */
   border-radius: 5px; /* Bordes redondeados */
-  width: 300px; /* Ajusta el ancho a 300 píxeles */
+  width: 500px; /* Ajusta el ancho a 300 píxeles */
 }
 
 .busqueda::placeholder {
@@ -132,7 +132,6 @@ boton #root {
   margin-bottom: -3%;
 }
 
-
 #country-btn {
   /*
     font-size: 50px; /* Aumentar el tamaño del emoji 
@@ -143,7 +142,7 @@ boton #root {
     background-color: white;
     display: inline-block;*/
 
-/*
+  /*
 display: flex;
   justify-content: end;
   position: absolute;
@@ -152,18 +151,18 @@ display: flex;
   border-radius: 5px;
   font-size: 25px; /* Aumenta el tamaño de la fuente */
 
-      position: absolute;
-      font-size: 20px; /* Reducir el tamaño del emoji (más pequeño que antes) */
-      padding: 5px 10px; /* Reducir el espacio alrededor del emoji */
-      width: 55px; /* Establecer un ancho fijo para el botón */
-      height: 45px; /* Establecer una altura fija para el botón */
-      cursor: pointer;
-      border: 1px solid #ffffff;
-      border-radius: 8px;
-      background-color: white;
-      display: inline-block;
-      text-align: center; /* Asegura que el emoji esté centrado en el botón */
-/*  font-size: 15px;
+  position: absolute;
+  font-size: 20px; /* Reducir el tamaño del emoji (más pequeño que antes) */
+  padding: 5px 10px; /* Reducir el espacio alrededor del emoji */
+  width: 55px; /* Establecer un ancho fijo para el botón */
+  height: 45px; /* Establecer una altura fija para el botón */
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: white;
+  display: inline-block;
+  text-align: center; /* Asegura que el emoji esté centrado en el botón */
+  /*  font-size: 15px;
   padding: 10px;
   cursor: pointer;
   border: 5px solid #ffffff;
@@ -200,4 +199,3 @@ display: flex;
 .country-menu li:hover {
   background-color: #e6e5e5;
 }
-

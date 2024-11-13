@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./components/card";
 import Boton from "./components/pagina";
 import Login from "./components/Login";
+import FiltroRecetas from "./components/filtros";
 
 function App() {
   useEffect(() => {
@@ -12,8 +13,7 @@ function App() {
   return (
     <>
       <Login />
-      <Boton />
-      <Card />
+      <FiltroRecetas />
     </>
   );
 }
@@ -21,6 +21,10 @@ function App() {
 export default App;
 
 /*
+
+      <Boton />
+      <Card />
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
