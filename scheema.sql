@@ -494,4 +494,32 @@ VALUES ('Papas'),
        ('Queso'),
        ('Nuez moscada');
 
+INSERT INTO dietas(nombre_de_recetas)
+VALUES ('Normal');
 
+/*agregue una receta nueva a la tabla recetas*/
+INSERT INTO recetas (porciones, paso_a_paso, tipo_de_dificultad, id , pais_id, user_id, ingredientes_id, cocciones_id, dietas_id , nombre_receta, tiempo_coccion )
+VALUES ('6','Preparación:
+1. Preparar el puré de papas:
+Pelá y cortá las papas en trozos, luego cocínalas en agua con sal hasta que estén tiernas (aproximadamente 20 minutos).
+Escurre las papas y tritúralas hasta obtener un puré suave.
+Agrega la manteca, la leche, la sal, la pimienta y la nuez moscada (si usas) al puré, mezclando bien hasta obtener una consistencia cremosa. Reserva.
+2. Preparar el relleno de carne:
+En una sartén, calienta el aceite o la manteca y sofríe la cebolla, el morrón y el ajo hasta que estén transparentes.
+Añade la carne picada y cocina hasta que esté dorada y bien cocida, desmenuzándola con una cuchara.
+Agrega el pimentón, la sal, la pimienta, los huevos duros picados y las aceitunas (si decides usarlas). Cocina unos minutos más, mezcla bien y retira del fuego.
+3. Armar el pastel de papa:
+En una fuente para horno, coloca una capa de puré de papas en el fondo.
+Añade una capa de la mezcla de carne encima del puré.
+Cubre con otra capa de puré de papas, extendiéndolo bien con una espátula.
+Pinta la capa superior de puré con el huevo batido para que se dore en el horno y, si deseas, espolvorea queso rallado por encima.
+4. Cocción:
+Lleva al horno precalentado a 200°C (400°F) y cocina durante unos 20 a 25 minutos, o hasta que la superficie esté dorada.
+5. Servir:
+Deja reposar unos minutos antes de cortar en porciones y servir. ¡Disfrútalo caliente!
+Este pastel de papa es perfecto para una comida reconfortante y se puede acompañar con una ensalada fresca.
+','medio','10','1','1','37','3', '8', 'Pastel de papas', '25 min');
+
+/*agregue ingrdientes*/
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Aceitunas');
