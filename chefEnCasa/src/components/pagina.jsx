@@ -28,9 +28,6 @@ import React, { useState, useEffect } from "react";
 import "./pagina.css";
 
 export default function Boton() {
-<<<<<<< HEAD
-  
-=======
   // Estado para el país seleccionado (emoji)
   const [selectedCountry, setSelectedCountry] = useState('🇦🇷');
   // Estado para mostrar u ocultar el menú de países
@@ -63,7 +60,6 @@ export default function Boton() {
     };
   }, []);
 
->>>>>>> 7e4c15c05b1b587e1e7b5a423902a0387a850daf
   return (
     <div className="caja">
       <div className="alineamiento-botones">

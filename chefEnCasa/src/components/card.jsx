@@ -10,7 +10,7 @@ const RecipeSlider = () => {
 
   const recipes = [
     {
-      id: 8,mjfkjasdfkad
+      id: 8,
       img: "/hotcakes.jpg",
       title: "Hotckes",
     },
