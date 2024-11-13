@@ -108,7 +108,6 @@ DROP TABLE momentos_dias;
 DESCRIBE pais;
 SHOW TABLES;
 
-<<<<<<< HEAD
 /* inserte los datos en la tabla de momentos del dia*/
 INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
 ('desayuno', 'Primera comida del día, generalmente por la mañana.'),
@@ -117,7 +116,7 @@ INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
 ('postre', 'Plato dulce que se sirve después de la comida.'),
 ('snacks', 'Comidas ligeras entre las comidas principales.'),
 ('merienda', 'Comida ligera que se toma entre la tarde y la cena.');
-=======
+
 INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
        ('jorge','jorge@gmail.com','777','Ingles'),
@@ -163,15 +162,11 @@ UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
 
 DELETE FROM pais WHERE nombre = "Colombia";
 
-<<<<<<< HEAD
-=======
 SELECT DISTINCT nombre from pais;
 DELETE FROM pais WHERE nombre = "brasil";
 DELETE FROM pais WHERE id = 10;
 
 ALTER TABLE pais ADD CONSTRAINT unique_nombre UNIQUE (nombre);
-=======
->>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
 
 INSERT INTO (nombre)
 VALUES ("plancha"),
@@ -189,10 +184,6 @@ WHERE id = 5;
 
 DELETE FROM coccion
 WHERE id = 6;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 
 //sf
 //ingredientes
@@ -255,12 +246,7 @@ VALUES ('Facil'),
        ('Dificl');
 
 //
-=======
->>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
->>>>>>> c6deac25d17fd2962adaea4dc39022b00357fab6
->>>>>>> b5a77dab93a7c4b9f7495e7dd33e53a047a2883b
->>>>>>> e619c37bdf74630427c7df9025049295fa68edc2
->>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
+
 
 
 UPDATE usuario
@@ -339,7 +325,40 @@ SET paso_a_paso = '1.	Preparar la mezcla: En una licuadora o procesador de alime
 	3.	Servir: Sirve los hotcakes calientes, agregando las frutas frescas encima o dentro de la mezcla antes de cocinar, y si deseas, acompáñalos con miel, o yogur griego.'
 WHERE id = 8;
 
-<<<<<<< HEAD
+UPDATE recetas
+SET paso_a_paso = '.1.Cortamos el ajo y la cebolla lo más picadito que podamos. 
+              2.Lo llevamos al fuego junto con un poquito de manteca. Algunos usan aceite para dorarlo, yo prefiero la manteca para darle un gusto diferente.
+               También en el caso de tener, agregar la carne cortada en pedacitos pequeños que uno pueda masticar.
+              Dejamos que se dore, mientras eso pasa y, si le pusieron manteca, por favor disfruten del aroma que sale de esa combinación, es lo mejor del mundo.
+             Tenemos que llegar al punto de la foto adjuntada, bien caramelizada la cebolla. Si le pusieron carne, tomen una y abranla a la mitad para verificar que se haya cocinado.Agregamos el tomate y yo por mi parte la voy a juntar con un poco de la misma salsa que había previamente descongelado. La suya seguramente quedará mucho más roja que la mía, ya que no estaba congelada.Ahora vamos a condimentarla, le agregamos la sal, la pimienta, el comino (este con cuidado que es fuerte) el pimentón y el orégano a gusto. Yo hecho pisquitas y voy probando a que punto me gusta. La prefiero media picantona, así que hecho bastante pimienta. Ustedes como prefieran. No se olviden de mojar un pan en esta salsa mientras se hace, muy importante, a no olvidarse eh!Una vez hierva la dejamos en fuego súper bajo y tapada y nos vamos a hacer los fideos. Para los que no saben hacer pasta instantánea, pues es lo más fácil que hay. Ponemos agua en un recipiente. Agregamos sal, Y SOLO SAL. Por favor, NO PONER ACEITE AL AGUA. Un italiano llora cada vez que hacen eso. Una vez llega a hervir, o sea se presentan burbujitas. Metemos la pasta y la vamos aplastando con un tenedor.Dejamos que se cocine al rededor de 20 minutos hasta que quede como en la foto. Colamos los fideos y ahí, a gusto le agregamos manteca o aceite. Luego servimos con la salsa. Yo le tire un poco de perejil encima, y obviamente le ponemos queso rallado. ¡Que lo disfruten!'
+WHERE id =7;
+
+UPDATE recetas
+SET paso_a_paso = '1.En una olla colocar abundante agua a hervir.
+2.En una sartén dorar en 1 cucharada de aceite la salchicha parrillera, cortar en rodajas de medio centímetro y reservar.
+3.En otra sartén saltearen en el resto del aceite caliente, los tomates cortados en cubos junto con el ajo picado, la sal y la pimienta, luego agregar Caldo de Verduras Maggi.
+4.Una vez que el tomate se ablande y se forme una salsa, agregar las salchichas cortadas y cocinar de 5 a 10 minutos aproximadamente.
+5.Cuando hierva el agua agregar la pasta y cocinar el tiempo que indique el envase.
+6.Escurrir la pasta y servir con la salsa y la albahaca cortada en juliana, por arriba.
+7.TIP: Una regla fácil de recordar: las porciones de los niños son 2/3 del de un adulto. Porque sus requerimientos nutricionales son menores, serviles porciones más pequeñas. Y acompañá las comidas con verduras frescas o cocidas, 
+aportan nutrientes valiosos como vitaminas, minerales y fibra.'
+WHERE id =6;
+
+
+
+/*AGREGUE MAS INGREDIENTES*/
+INSERT INTO ingredientes (ID,tipo_de_ingrediente)
+VALUES ('25','Avena'),
+       ('26','Banana'),
+       ('27','Polvo de hornear'),
+       ('28','Miel'),
+       ('29','Yogur griego'),
+       ('30','Limón'),
+       ('31','Naranja'),
+       ('32','Pan'),
+       ('33','Canela');
+=======
+
 UPDATE recetas
 SET rec_ing = 6
 WHERE ingredientes_id = 9;
@@ -351,9 +370,6 @@ WHERE ingredientes_id = 2;
 UPDATE recetas
 SET rec_ing = 7
 WHERE ingredientes_id = 3;
-=======
-
-
 
 
 UPDATE ingredientes
@@ -428,3 +444,80 @@ UPDATE ingredientes
 SET id = 24
 WHERE id = 31;
 
+/*MODIFIQUE una receta de la tabla recetas*/
+UPDATE recetas
+SET paso_a_paso = '1. Preparación de ingredientes
+Corta el ajo y la cebolla lo más finamente posible.
+Si vas a usar carne, córtala en trozos pequeños para que sea fácil de masticar.
+2. Sofreír la cebolla, ajo y carne (opcional)
+Coloca un poco de manteca en una sartén (también puedes usar aceite, pero la manteca le da un sabor diferente).
+Añade el ajo y la cebolla picados, y sofríelos a fuego medio.
+Si tienes carne, agrégala a la sartén y dórala junto con la cebolla y el ajo.
+Cocina hasta que la cebolla esté bien caramelizada y, si usaste carne, verifica que esté bien cocida abriendo un trozo a la mitad.
+3. Incorporar el tomate y hacer la salsa
+Agrega el tomate a la sartén. Si tienes salsa de tomate descongelada, también puedes agregar un poco para enriquecer la mezcla.
+Condimenta a gusto con sal, pimienta, comino, pimentón y orégano.
+Ajusta las especias probando poco a poco; si prefieres un toque picante, añade más pimienta.
+Deja que hierva y, luego, reduce el fuego al mínimo, tapa la sartén y deja que la salsa se cocine a fuego lento.
+4. Cocinar la pasta
+Llena una olla con agua y añade sal (evita agregar aceite al agua).
+Lleva el agua a ebullición y, cuando esté burbujeando, agrega la pasta.
+Cocina la pasta alrededor de 20 minutos o hasta que esté al dente.
+Escurre la pasta y, si deseas, mézclala con un poco de manteca o aceite.
+5. Servir
+Sirve los fideos en un plato y cúbrelos con la salsa.
+Espolvorea con perejil fresco y queso rallado, si prefieres.
+6. Disfrutar
+¡Aprovecha y disfruta del sabor!'
+WHERE id = 7;
+
+/*agregue una receta nueva a la tabla recetas*/
+INSERT INTO recetas (porciones, paso_a_paso, tipo_de_dificultad, id , pais_id, user_id, ingredientes _id, cocciones_id, dietas_id , nombre_receta, tiempo_coccion , rec_ing )
+VALUES ('8','Preparación:
+Preparar el caramelo: En una sartén a fuego medio, colocá el azúcar con unas gotas de agua. Cocina hasta que se disuelva y adquiera un color dorado. Viértelo inmediatamente en el molde donde harás el budín, cubriendo toda la base y las paredes. Deja que se enfríe.
+Preparar el pan: Corta el pan en trozos pequeños y colócalo en un bol grande.
+Remojar el pan: Calienta la leche y viértela sobre el pan troceado. Deja reposar unos minutos hasta que el pan esté bien empapado y blando.
+Batir los ingredientes: Agrega el azúcar, los huevos, la esencia de vainilla y la ralladura de limón o naranja al bol con el pan y la leche. Con una batidora de mano, mezcla todo hasta obtener una mezcla homogénea. Si prefieres una textura más rústica, puedes dejar algunos trozos de pan sin triturar completamente.
+Hornear: Vierte la mezcla en el molde caramelizado. Cocina en horno precalentado a 180°C (350°F) en baño María durante aproximadamente 1 hora, o hasta que al insertar un cuchillo en el centro, éste salga limpio.
+Enfriar y desmoldar: Deja que el budín de pan se enfríe a temperatura ambiente y luego refrigéralo por al menos 2 horas. Para desmoldarlo, pasa un cuchillo por los bordes y da vuelta el molde sobre un plato.
+Sugerencias:
+Sirve el budín de pan frío o a temperatura ambiente, y acompáñalo con un poco de crema batida o dulce de leche si quieres un toque extra de sabor.¡Disfrútalo!','fácil','9','1','4','32','3', '1', 'Budín de pan', '1 hora','4');
+
+/*agregue ingrdientes*/
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Papas'),
+       ('Ají molido'),
+       ('Morrón'),
+       ('Carne picada'),
+       ('Queso'),
+       ('Nuez moscada');
+
+INSERT INTO dietas(nombre_de_recetas)
+VALUES ('Normal');
+
+/*agregue una receta nueva a la tabla recetas*/
+INSERT INTO recetas (porciones, paso_a_paso, tipo_de_dificultad, id , pais_id, user_id, ingredientes_id, cocciones_id, dietas_id , nombre_receta, tiempo_coccion )
+VALUES ('6','Preparación:
+1. Preparar el puré de papas:
+Pelá y cortá las papas en trozos, luego cocínalas en agua con sal hasta que estén tiernas (aproximadamente 20 minutos).
+Escurre las papas y tritúralas hasta obtener un puré suave.
+Agrega la manteca, la leche, la sal, la pimienta y la nuez moscada (si usas) al puré, mezclando bien hasta obtener una consistencia cremosa. Reserva.
+2. Preparar el relleno de carne:
+En una sartén, calienta el aceite o la manteca y sofríe la cebolla, el morrón y el ajo hasta que estén transparentes.
+Añade la carne picada y cocina hasta que esté dorada y bien cocida, desmenuzándola con una cuchara.
+Agrega el pimentón, la sal, la pimienta, los huevos duros picados y las aceitunas (si decides usarlas). Cocina unos minutos más, mezcla bien y retira del fuego.
+3. Armar el pastel de papa:
+En una fuente para horno, coloca una capa de puré de papas en el fondo.
+Añade una capa de la mezcla de carne encima del puré.
+Cubre con otra capa de puré de papas, extendiéndolo bien con una espátula.
+Pinta la capa superior de puré con el huevo batido para que se dore en el horno y, si deseas, espolvorea queso rallado por encima.
+4. Cocción:
+Lleva al horno precalentado a 200°C (400°F) y cocina durante unos 20 a 25 minutos, o hasta que la superficie esté dorada.
+5. Servir:
+Deja reposar unos minutos antes de cortar en porciones y servir. ¡Disfrútalo caliente!
+Este pastel de papa es perfecto para una comida reconfortante y se puede acompañar con una ensalada fresca.
+','medio','10','1','1','37','3', '8', 'Pastel de papas', '25 min');
+
+/*agregue ingrdientes*/
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Aceitunas');

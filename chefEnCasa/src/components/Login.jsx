@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./App.css"; // Si decides crear un archivo CSS externo
+
+
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -125,4 +126,4 @@ const styles = {
   },
 };
 
-export default App;
+export default Login;
