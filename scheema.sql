@@ -108,7 +108,6 @@ DROP TABLE momentos_dias;
 DESCRIBE pais;
 SHOW TABLES;
 
-<<<<<<< HEAD
 /* inserte los datos en la tabla de momentos del dia*/
 INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
 ('desayuno', 'Primera comida del día, generalmente por la mañana.'),
@@ -163,15 +162,11 @@ UPDATE pais SET nombre = "brasil " WHERE nombre = "Brasil";
 
 DELETE FROM pais WHERE nombre = "Colombia";
 
-<<<<<<< HEAD
-=======
 SELECT DISTINCT nombre from pais;
 DELETE FROM pais WHERE nombre = "brasil";
 DELETE FROM pais WHERE id = 10;
 
 ALTER TABLE pais ADD CONSTRAINT unique_nombre UNIQUE (nombre);
-=======
->>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
 
 INSERT INTO (nombre)
 VALUES ("plancha"),
@@ -189,10 +184,6 @@ WHERE id = 5;
 
 DELETE FROM coccion
 WHERE id = 6;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 
 //sf
 //ingredientes
@@ -255,12 +246,7 @@ VALUES ('Facil'),
        ('Dificl');
 
 //
-=======
->>>>>>> 47f91ba62ff0bb6a7681acf6347918f073f36161
->>>>>>> c6deac25d17fd2962adaea4dc39022b00357fab6
->>>>>>> b5a77dab93a7c4b9f7495e7dd33e53a047a2883b
->>>>>>> e619c37bdf74630427c7df9025049295fa68edc2
->>>>>>> 2336061588d6d4aa9bccebe724f23bd7bf8ae943
+
 
 
 UPDATE usuario
@@ -339,6 +325,26 @@ SET paso_a_paso = '1.	Preparar la mezcla: En una licuadora o procesador de alime
 	3.	Servir: Sirve los hotcakes calientes, agregando las frutas frescas encima o dentro de la mezcla antes de cocinar, y si deseas, acompáñalos con miel, o yogur griego.'
 WHERE id = 8;
 
+UPDATE recetas
+SET paso_a_paso = '.1.Cortamos el ajo y la cebolla lo más picadito que podamos. 
+              2.Lo llevamos al fuego junto con un poquito de manteca. Algunos usan aceite para dorarlo, yo prefiero la manteca para darle un gusto diferente.
+               También en el caso de tener, agregar la carne cortada en pedacitos pequeños que uno pueda masticar.
+              Dejamos que se dore, mientras eso pasa y, si le pusieron manteca, por favor disfruten del aroma que sale de esa combinación, es lo mejor del mundo.
+             Tenemos que llegar al punto de la foto adjuntada, bien caramelizada la cebolla. Si le pusieron carne, tomen una y abranla a la mitad para verificar que se haya cocinado.Agregamos el tomate y yo por mi parte la voy a juntar con un poco de la misma salsa que había previamente descongelado. La suya seguramente quedará mucho más roja que la mía, ya que no estaba congelada.Ahora vamos a condimentarla, le agregamos la sal, la pimienta, el comino (este con cuidado que es fuerte) el pimentón y el orégano a gusto. Yo hecho pisquitas y voy probando a que punto me gusta. La prefiero media picantona, así que hecho bastante pimienta. Ustedes como prefieran. No se olviden de mojar un pan en esta salsa mientras se hace, muy importante, a no olvidarse eh!Una vez hierva la dejamos en fuego súper bajo y tapada y nos vamos a hacer los fideos. Para los que no saben hacer pasta instantánea, pues es lo más fácil que hay. Ponemos agua en un recipiente. Agregamos sal, Y SOLO SAL. Por favor, NO PONER ACEITE AL AGUA. Un italiano llora cada vez que hacen eso. Una vez llega a hervir, o sea se presentan burbujitas. Metemos la pasta y la vamos aplastando con un tenedor.Dejamos que se cocine al rededor de 20 minutos hasta que quede como en la foto. Colamos los fideos y ahí, a gusto le agregamos manteca o aceite. Luego servimos con la salsa. Yo le tire un poco de perejil encima, y obviamente le ponemos queso rallado. ¡Que lo disfruten!'
+WHERE id =7;
+
+UPDATE recetas
+SET paso_a_paso = '1.En una olla colocar abundante agua a hervir.
+2.En una sartén dorar en 1 cucharada de aceite la salchicha parrillera, cortar en rodajas de medio centímetro y reservar.
+3.En otra sartén saltearen en el resto del aceite caliente, los tomates cortados en cubos junto con el ajo picado, la sal y la pimienta, luego agregar Caldo de Verduras Maggi.
+4.Una vez que el tomate se ablande y se forme una salsa, agregar las salchichas cortadas y cocinar de 5 a 10 minutos aproximadamente.
+5.Cuando hierva el agua agregar la pasta y cocinar el tiempo que indique el envase.
+6.Escurrir la pasta y servir con la salsa y la albahaca cortada en juliana, por arriba.
+7.TIP: Una regla fácil de recordar: las porciones de los niños son 2/3 del de un adulto. Porque sus requerimientos nutricionales son menores, serviles porciones más pequeñas. Y acompañá las comidas con verduras frescas o cocidas, 
+aportan nutrientes valiosos como vitaminas, minerales y fibra.'
+WHERE id =6;
+
+
 <<<<<<< HEAD
 UPDATE recetas
 SET rec_ing = 6
@@ -351,9 +357,6 @@ WHERE ingredientes_id = 2;
 UPDATE recetas
 SET rec_ing = 7
 WHERE ingredientes_id = 3;
-=======
-
-
 
 
 UPDATE ingredientes
@@ -427,4 +430,3 @@ WHERE id = 30;
 UPDATE ingredientes
 SET id = 24
 WHERE id = 31;
-
