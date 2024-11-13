@@ -116,7 +116,7 @@ INSERT INTO momentos_dias (momentos_del_dias, descripcion) VALUES
 ('postre', 'Plato dulce que se sirve después de la comida.'),
 ('snacks', 'Comidas ligeras entre las comidas principales.'),
 ('merienda', 'Comida ligera que se toma entre la tarde y la cena.');
-=======
+
 INSERT INTO usuario (user,email, contrasenia, idioma)
 VALUES ('adhara','adhara@gmail.com','111','Español'),
        ('jorge','jorge@gmail.com','777','Ingles'),
@@ -345,7 +345,20 @@ aportan nutrientes valiosos como vitaminas, minerales y fibra.'
 WHERE id =6;
 
 
-<<<<<<< HEAD
+
+/*AGREGUE MAS INGREDIENTES*/
+INSERT INTO ingredientes (ID,tipo_de_ingrediente)
+VALUES ('25','Avena'),
+       ('26','Banana'),
+       ('27','Polvo de hornear'),
+       ('28','Miel'),
+       ('29','Yogur griego'),
+       ('30','Limón'),
+       ('31','Naranja'),
+       ('32','Pan'),
+       ('33','Canela');
+=======
+
 UPDATE recetas
 SET rec_ing = 6
 WHERE ingredientes_id = 9;
@@ -430,3 +443,52 @@ WHERE id = 30;
 UPDATE ingredientes
 SET id = 24
 WHERE id = 31;
+
+/*MODIFIQUE una receta de la tabla recetas*/
+UPDATE recetas
+SET paso_a_paso = '1. Preparación de ingredientes
+Corta el ajo y la cebolla lo más finamente posible.
+Si vas a usar carne, córtala en trozos pequeños para que sea fácil de masticar.
+2. Sofreír la cebolla, ajo y carne (opcional)
+Coloca un poco de manteca en una sartén (también puedes usar aceite, pero la manteca le da un sabor diferente).
+Añade el ajo y la cebolla picados, y sofríelos a fuego medio.
+Si tienes carne, agrégala a la sartén y dórala junto con la cebolla y el ajo.
+Cocina hasta que la cebolla esté bien caramelizada y, si usaste carne, verifica que esté bien cocida abriendo un trozo a la mitad.
+3. Incorporar el tomate y hacer la salsa
+Agrega el tomate a la sartén. Si tienes salsa de tomate descongelada, también puedes agregar un poco para enriquecer la mezcla.
+Condimenta a gusto con sal, pimienta, comino, pimentón y orégano.
+Ajusta las especias probando poco a poco; si prefieres un toque picante, añade más pimienta.
+Deja que hierva y, luego, reduce el fuego al mínimo, tapa la sartén y deja que la salsa se cocine a fuego lento.
+4. Cocinar la pasta
+Llena una olla con agua y añade sal (evita agregar aceite al agua).
+Lleva el agua a ebullición y, cuando esté burbujeando, agrega la pasta.
+Cocina la pasta alrededor de 20 minutos o hasta que esté al dente.
+Escurre la pasta y, si deseas, mézclala con un poco de manteca o aceite.
+5. Servir
+Sirve los fideos en un plato y cúbrelos con la salsa.
+Espolvorea con perejil fresco y queso rallado, si prefieres.
+6. Disfrutar
+¡Aprovecha y disfruta del sabor!'
+WHERE id = 7;
+
+/*agregue una receta nueva a la tabla recetas*/
+INSERT INTO recetas (porciones, paso_a_paso, tipo_de_dificultad, id , pais_id, user_id, ingredientes _id, cocciones_id, dietas_id , nombre_receta, tiempo_coccion , rec_ing )
+VALUES ('8','Preparación:
+Preparar el caramelo: En una sartén a fuego medio, colocá el azúcar con unas gotas de agua. Cocina hasta que se disuelva y adquiera un color dorado. Viértelo inmediatamente en el molde donde harás el budín, cubriendo toda la base y las paredes. Deja que se enfríe.
+Preparar el pan: Corta el pan en trozos pequeños y colócalo en un bol grande.
+Remojar el pan: Calienta la leche y viértela sobre el pan troceado. Deja reposar unos minutos hasta que el pan esté bien empapado y blando.
+Batir los ingredientes: Agrega el azúcar, los huevos, la esencia de vainilla y la ralladura de limón o naranja al bol con el pan y la leche. Con una batidora de mano, mezcla todo hasta obtener una mezcla homogénea. Si prefieres una textura más rústica, puedes dejar algunos trozos de pan sin triturar completamente.
+Hornear: Vierte la mezcla en el molde caramelizado. Cocina en horno precalentado a 180°C (350°F) en baño María durante aproximadamente 1 hora, o hasta que al insertar un cuchillo en el centro, éste salga limpio.
+Enfriar y desmoldar: Deja que el budín de pan se enfríe a temperatura ambiente y luego refrigéralo por al menos 2 horas. Para desmoldarlo, pasa un cuchillo por los bordes y da vuelta el molde sobre un plato.
+Sugerencias:
+Sirve el budín de pan frío o a temperatura ambiente, y acompáñalo con un poco de crema batida o dulce de leche si quieres un toque extra de sabor.¡Disfrútalo!','fácil','9','1','4','32','3', '1', 'Budín de pan', '1 hora','4');
+
+/*agregue ingrdientes*/
+INSERT INTO ingredientes (tipo_de_ingrediente)
+VALUES ('Papas'),
+       ('Ají molido'),
+       ('Morrón'),
+       ('Carne picada'),
+       ('Queso'),
+       ('Nuez moscada');
+
