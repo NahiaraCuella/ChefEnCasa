@@ -294,4 +294,22 @@ VALUES ('Fideo'),
     	('Pollo'),
     	('Tomate'),
     	('Cebolla');
-       
+
+UPDATE recetas
+SET paso_a_paso = '1.	Preparar la mezcla: En una licuadora o procesador de alimentos, agrega la avena, la leche, los huevos, banana (si lo usas), el polvo de hornear, la canela, la esencia de vainilla y la sal. Licúa hasta obtener una mezcla suave y homogénea. Si está muy espesa, puedes añadir un poco más de leche para obtener la consistencia deseada.
+	2.	Cocinar los hotcakes: Calienta una sartén antiadherente a fuego medio y añade un poco de aceite de coco o mantequilla. Vierte la mezcla en la sartén en pequeñas porciones (aproximadamente 2-3 cucharadas de mezcla por hotcake). Cocina durante 2-3 minutos, hasta que aparezcan burbujas en la superficie, luego voltea con cuidado y cocina durante otro minuto o hasta que estén dorados.
+	3.	Servir: Sirve los hotcakes calientes, agregando las frutas frescas encima o dentro de la mezcla antes de cocinar, y si deseas, acompáñalos con miel, o yogur griego.'
+WHERE id = 8;
+
+/*AGREGUE MAS INGREDIENTES*/
+INSERT INTO ingredientes (ID,tipo_de_ingrediente)
+VALUES ('25','Avena'),
+       ('26','Banana'),
+       ('27','Polvo de hornear'),
+       ('28','Miel'),
+       ('29','Yogur griego'),
+       ('30','Limón'),
+       ('31','Naranja'),
+       ('32','Pan'),
+       ('33','Canela');
+

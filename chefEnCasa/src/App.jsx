@@ -3,6 +3,7 @@ import Card from "./components/card";
 import Header from "./components/header";
 
 import Boton from "./components/pagina";
+import Login from "./components/Login";
 
 function App() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function App() {
   }, []);
   return (
     <>
+    <Login />
       <Boton />
       <Card />
       <Header />
