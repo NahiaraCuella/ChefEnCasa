@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Card from "./components/card";
 import Boton from "./components/pagina";
 import Login from "./components/Login";
-import FiltroRecetas from "./components/filtros";
+
+
 
 function App() {
   useEffect(() => {
@@ -12,8 +13,12 @@ function App() {
   }, []);
   return (
     <>
+      
       <Login />
-      <FiltroRecetas />
+      <header/>
+      <Boton/>
+      <Card/>
+      
     </>
   );
 }

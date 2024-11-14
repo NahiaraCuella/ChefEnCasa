@@ -118,7 +118,7 @@ boton #root {
   color: #000000; /* Cambia el color del texto */
   background-color: #ffffff; /* Cambia el color de fondo */
   border: 1px solid #ccc; /* Cambia el color del borde */
-  padding: 15px; /* Agrega un poco de espacio interno */
+  padding: 8px; /* Agrega un poco de espacio interno */
   border-radius: 5px; /* Bordes redondeados */
   width: 500px; /* Ajusta el ancho a 300 píxeles */
 }
