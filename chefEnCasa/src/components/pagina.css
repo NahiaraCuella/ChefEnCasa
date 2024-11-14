@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+.header_imagen {
+
+width: 500px;
+
+}
+
 .alineamiento-botones {
   display: flex;
   justify-content: end;
