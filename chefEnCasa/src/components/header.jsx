@@ -3,7 +3,7 @@ export default function Header(){
     return(
         <>
         <header>
-            <h1 className = "titulo">Chef En Casa </h1>
+                <img src="../../public/Logo.png" alt="" />
                <div>
                 <input className="busqueda" type="text" placeholder="buscar..."/>
                 <button>🍳</button>

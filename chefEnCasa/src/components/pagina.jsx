@@ -88,7 +88,7 @@ export default function Boton() {
         </div>
       </div>
       <header className="alineamiento_header">
-        <h1 className="titulo">Chef En Casa</h1>
+          <img src="../../public/Logo.png" alt="" className="header_imagen"/>
         <div>
           <input className="busqueda" type="text" placeholder="buscar..." />
           <button>🍳</button>
