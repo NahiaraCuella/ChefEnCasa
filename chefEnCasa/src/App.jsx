@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./components/card";
 import Boton from "./components/pagina";
-import Login from "./components/Login";
 
 
 
@@ -14,7 +13,6 @@ function App() {
   return (
     <>
       
-      <Login />
       <header/>
       <Boton/>
       <Card/>
