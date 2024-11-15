@@ -162,7 +162,7 @@ boton #root {
   border: 1px solid #ccc; /* Cambia el color del borde */
   padding: 8px; /* Agrega un poco de espacio interno */
   border-radius: 5px; /* Bordes redondeados */
-  width: 500px; /* Ajusta el ancho a 300 píxeles */
+  width: 450px; /* Ajusta el ancho a 300 píxeles */
   margin: 5px;
 }
 
@@ -173,7 +173,7 @@ boton #root {
 .titulo {
   font-size: 70px;
   margin-bottom: -3%;
-  font-family: cursive;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #country-btn {
