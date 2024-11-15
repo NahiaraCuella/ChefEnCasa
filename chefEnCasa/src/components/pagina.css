@@ -2,51 +2,43 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
- }
- 
- 
- .alineamiento_header {
+}
+
+.alineamiento_header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .header_imagen {
-
-width: 500px;
-
+  width: 500px;
 }
 
 .alineamiento-botones {
   display: flex;
   justify-content: end;
   position: relative; /* Esto permite que los elementos hijos usen posición absoluta con respecto a este contenedor */
- }
- 
- 
- .alineamiento-boton-login {
-   display: flex;
+}
+
+.alineamiento-boton-login {
+  display: flex;
   justify-content: end;
   position: absolute;
   top: 1rem;
   left: 75rem;
   border-radius: 5px;
   font-size: 25px; /* Aumenta el tamaño de la fuente*/
- }
-  #login-btn:hover {
-    border: 2px solid #0a3fa1; /* Borde azul */
-    background-color: #ffffff; /* Fondo azul */
-    color: white; /* Cambiar color del emoji a blanco */
-    box-shadow: 4px 4px 6px 0 #49abe4(0 6% 15%), 
-                -4px -4px 6px 0 rgb(255, 255, 255),
-                inset -4px -4px 6px 0 rgb(255, 255, 255),
-                inset 4px 4px 6px 0 rgb(255, 255, 255); /* Sombra más pronunciada en hover */
-  }
- 
- 
- 
- /**/
- /*.alineamiento-boton-pais {
+}
+#login-btn:hover {
+  border: 2px solid #0a3fa1; /* Borde azul */
+  background-color: #ffffff; /* Fondo azul */
+  color: white; /* Cambiar color del emoji a blanco */
+  box-shadow: 4px 4px 6px 0 #49abe4(0 6% 15%),
+    -4px -4px 6px 0 rgb(255, 255, 255), inset -4px -4px 6px 0 rgb(255, 255, 255),
+    inset 4px 4px 6px 0 rgb(255, 255, 255); /* Sombra más pronunciada en hover */
+}
+
+/*.alineamiento-boton-pais {
   
   display: flex;
   justify-content: end;
@@ -55,9 +47,9 @@ width: 500px;
   left: 73rem;
   font-size: 25px; /* Aumenta el tamaño de la fuente 
   
- }*/
- /**/
- /* Botón de país con efecto de borde azul al pasar el mouse */
+ }
+/**/
+/* Botón de país con efecto de borde azul al pasar el mouse */
 #country-btn {
   position: absolute;
   font-size: 20px; /* Reducir el tamaño del emoji */
@@ -73,8 +65,6 @@ width: 500px;
   transition: all 0.3s ease; /* Transición suave para cambios en borde y fondo */
   left: 70rem;
   top: 1rem;
-
-
 }
 
 /* Efecto hover: Borde azul y sombra */
@@ -82,63 +72,55 @@ width: 500px;
   border: 2px solid #0a3fa1; /* Borde azul */
   background-color: #ffffff; /* Fondo azul */
   color: white; /* Cambiar color del emoji a blanco */
-  box-shadow: 4px 4px 6px 0 #49abe4(0 6% 15%), 
-              -4px -4px 6px 0 rgb(255, 255, 255),
-              inset -4px -4px 6px 0 rgb(255, 255, 255),
-              inset 4px 4px 6px 0 rgb(255, 255, 255); /* Sombra más pronunciada en hover */
+  box-shadow: 4px 4px 6px 0 #49abe4(0 6% 15%),
+    -4px -4px 6px 0 rgb(255, 255, 255), inset -4px -4px 6px 0 rgb(255, 255, 255),
+    inset 4px 4px 6px 0 rgb(255, 255, 255); /* Sombra más pronunciada en hover */
 }
 
- 
- boton #root {
+boton #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
- }
- 
- 
- .logo {
+}
+
+.logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
- }
- .logo:hover {
+}
+.logo:hover {
   filter: drop-shadow(0 0 2em #ff6464aa);
- }
- .logo.react:hover {
+}
+.logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
- }
- 
- 
- @keyframes logo-spin {
+}
+
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
- }
- 
- 
- @media (prefers-reduced-motion: no-preference) {
+}
+
+@media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
- }
- 
- 
- .card {
+}
+
+.card {
   padding: 2em;
- }
- 
- 
- .read-the-docs {
+}
+
+.read-the-docs {
   color: #dddddd;
- }
- 
- 
- .custom-btn {
+}
+
+.custom-btn {
   width: 130px;
   height: 40px;
   color: #fff;
@@ -154,31 +136,27 @@ width: 500px;
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   font-size: 15px;
- }
- 
- 
- .btn-2 {
+}
+
+.btn-2 {
   background: #004dff;
   background: linear-gradient(0deg, #bccef8 0%, #bccef8 100%);
   border: none;
- }
- 
- 
- .btn-2:before {
+}
+
+.btn-2:before {
   height: 0%;
   width: 2px;
- }
- 
- 
- .btn-2:hover {
+}
+
+.btn-2:hover {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
     -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
- }
- 
- 
- .busqueda {
+}
+
+.busqueda {
   color: #000000; /* Cambia el color del texto */
   background-color: #ffffff; /* Cambia el color de fondo */
   border: 1px solid #ccc; /* Cambia el color del borde */
@@ -186,21 +164,19 @@ width: 500px;
   border-radius: 5px; /* Bordes redondeados */
   width: 500px; /* Ajusta el ancho a 300 píxeles */
   margin: 5px;
- }
- 
- 
- .busqueda::placeholder {
+}
+
+.busqueda::placeholder {
   color: #3b3939; /* Cambia el color del texto del placeholder */
- }
- 
- 
- .titulo {
-  font-size: 58px;
+}
+
+.titulo {
+  font-size: 70px;
   margin-bottom: -3%;
- }
- 
- 
- #country-btn {
+  font-family: cursive;
+}
+
+#country-btn {
   /*
     font-size: 50px; /* Aumentar el tamaño del emoji
     padding: 5px;
@@ -209,8 +185,7 @@ width: 500px;
     border-radius: 5px;
     background-color: white;
     display: inline-block;*/
- 
- 
+
   /*
  display: flex;
   justify-content: end;
@@ -219,8 +194,7 @@ width: 500px;
   left: 75rem;
   border-radius: 5px;
   font-size: 25px; /* Aumenta el tamaño de la fuente */
- 
- 
+
   position: absolute;
   font-size: 20px; /* Reducir el tamaño del emoji (más pequeño que antes) */
   padding: 5px 10px; /* Reducir el espacio alrededor del emoji */
@@ -240,10 +214,9 @@ width: 500px;
   background-color: white;
   display: flex;
   width: 50px; /* Ajusta el ancho a 300 píxeles */
- }
- 
- 
- .country-menu {
+}
+
+.country-menu {
   position: absolute;
   background-color: rgb(255, 255, 255);
   border: 1px solid #000000;
@@ -254,40 +227,28 @@ width: 500px;
   margin-top: 65px;
   color: #000000;
   font-size: 15px;
- }
- 
- 
- .country-menu ul {
+}
+
+.country-menu ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
- }
- 
- 
- .country-menu li {
+}
+
+.country-menu li {
   padding: 10px 20px;
   cursor: pointer;
- }
- 
- 
- .country-menu li:hover {
+}
+
+.country-menu li:hover {
   background-color: #e6e5e5;
- }
- 
- 
- 
- 
- 
- 
- /* pagina.css */
- 
- 
- 
- 
- /* Overlay para el formulario de login */
- 
- 
- .login-overlay {
+}
+
+/* pagina.css */
+
+/* Overlay para el formulario de login */
+
+.login-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -298,40 +259,39 @@ width: 500px;
   justify-content: center;
   align-items: center;
   z-index: 999;
- }
- /* Estilos de la ventana de login */
- .login-box {
+}
+/* Estilos de la ventana de login */
+.login-box {
   background-color: rgb(122, 127, 134);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
- }
- .input-box {
+}
+.input-box {
   margin-bottom: 20px;
- }
- .input {
+}
+.input {
   width: 100%;
   padding: 10px;
   background: none;
   border: 1px solid #afadad;
   border-radius: 5px;
   font-size: 16px;
- }
- .button-box {
+}
+.button-box {
   display: flex;
   justify-content: space-between;
- }
- .button {
+}
+.button {
   padding: 10px;
   background-color: #acacac;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
- }
- .button:hover {
+}
+.button:hover {
   background-color: #555;
- }
- 
+}

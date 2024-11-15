@@ -1,15 +1,13 @@
-export default function Header(){
-
-    return(
-        <>
-        <header>
-                <img src="../../public/Logo.png" alt="" />
-               <div>
-                <input className="busqueda" type="text" placeholder="buscar..."/>
-                <button>🍳</button>
-               </div>
-        </header>
-        
-        </>
-    )
+export default function Header() {
+  return (
+    <>
+      <header>
+        <div>
+          <h1 className="titulo">Chef En Casa</h1>
+          <input className="busqueda" type="text" placeholder="buscar..." />
+          <button>🍳</button>
+        </div>
+      </header>
+    </>
+  );
 }

@@ -17,12 +17,12 @@ const RecipeSlider = () => {
     { id: 7, img: "/f.jpg", title: "Fideos con tuco" },
     { id: 6, img: "/p.avif", title: "Fideos con salsa y salchicha" },
     {
-      id: 9,
+      id: 10,
       img: "/pastel-de-papas.jpg",
       title: "Pastel de Papas",
     },
     {
-      id: 10,
+      id: 9,
       img: "/budin-de-pan.jpg",
       title: "Bundin de Pan",
     },
