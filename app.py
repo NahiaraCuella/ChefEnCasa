@@ -1,13 +1,17 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template,Blueprint
 from flask_cors import CORS  # Importa CORS
 import mysql.connector
 
 db_file = "chefencasa.db"
-
+bp = Blueprint()
 
 
 app = Flask(__name__)
 CORS(app)  # Aplica CORS a toda la aplicación
+
+#Todos los def que digan jsonify a la ruta le vas a pasar (/api/lo de atras queda igual)
+#Paso 2: armar nuevas rutas, donde la ruta diga (ej:/usuario), en el return devuelve render_template 
+
 
 def conectarseABaseDeDatos():
     return mysql.connector.connect(
@@ -17,7 +21,23 @@ def conectarseABaseDeDatos():
             database='chefencasa'
         )    
 
-@app.route('/usuarios')
+
+@app.route("/recetas")
+def recetas():
+    
+    conn = conectarseABaseDeDatos()
+    cursor = conn.cursor(dictionary=True)
+    consulta = """
+        SELECT * FROM recetas;"""
+    lista_recetas = cursor.execute(consulta)
+    print(lista_recetas)
+    pagina = render_template("recetas.html", recetas = lista_recetas)
+    
+    return pagina
+
+
+
+@app.route('/api/usuarios')
 def usuario():
     # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
@@ -33,7 +53,7 @@ def usuario():
     # Devolver los resultados en formato JSON
     return jsonify(rows)
 
-@app.route('/usuarios/<int:id>')
+@app.route('/api/usuarios/<int:id>')
 def detalle_usuario(id):
     # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
@@ -52,7 +72,7 @@ def detalle_usuario(id):
     result = {"usuario": usuario}
     return jsonify(result)
 
-@app.route('/recetas-por-usuario/<int:id>')
+@app.route('/api/recetas-por-usuario/<int:id>')
 def conectar_recetas(id):
     # Conectar a la base de datos
     conn = conectarseABaseDeDatos()
@@ -69,7 +89,7 @@ def conectar_recetas(id):
     result = {"recetas": recetas}
     return jsonify(result)
 
-@app.route('/usuarios', methods=("POST",))
+@app.route('/api/usuarios', methods=("POST",))
 def agregar_usuario():
     conn = conectarseABaseDeDatos()
     email = request.json["email"]
@@ -91,7 +111,7 @@ def agregar_usuario():
     resultado = { "resultado" : "ok", "mensaje" : "se agregó el usuario"}
     return jsonify(resultado)
 
-@app.route('/usuarios/<int:id>', methods=('DELETE',))
+@app.route('/api/usuarios/<int:id>', methods=('DELETE',))
 def borrar_usuario(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -114,7 +134,7 @@ def borrar_usuario(id):
 
 
 
-@app.route('/ingredientes/<int:id>', methods=('GET',))
+@app.route('/api/ingredientes/<int:id>', methods=('GET',))
 def obtener_ingrediente(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -132,7 +152,7 @@ def obtener_ingrediente(id):
         return jsonify({"error": "No se encontraron resultados"}), 404
     return jsonify(resultado)
 
-@app.route('/recetas/<int:id>', methods=('DELETE',))
+@app.route('/api/recetas/<int:id>', methods=('DELETE',))
 def borrar_recetas(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -149,7 +169,7 @@ def borrar_recetas(id):
     resultado = {"resultado" : "ok", "mensaje" : "receta borrado"}
     return jsonify(resultado)
 
-@app.route('/ingredientes/', methods=('POST',))
+@app.route('/api/ingredientes/', methods=('POST',))
 def agregar_ingredientes():
     conn = conectarseABaseDeDatos()
     tipo_de_ingrediente = request.json["tipo_de_ingrediente"]
@@ -168,7 +188,7 @@ def agregar_ingredientes():
     return jsonify(resultado)
 
 
-@app.route('/cocciones/<int:id>', methods=('GET',))
+@app.route('/api/cocciones/<int:id>', methods=('GET',))
 def obtener_cocciones(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -189,7 +209,7 @@ def obtener_cocciones(id):
     return jsonify(resultado)
 
 # Ruta para obtener una receta por su ID
-@app.route('/receta/<int:id>', methods=['GET'])
+@app.route('/api/receta/<int:id>', methods=['GET'])
 def get_receta(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -206,7 +226,7 @@ def get_receta(id):
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route('/dietas/<int:id>', methods=('GET',))
+@app.route('/api/dietas/<int:id>', methods=('GET',))
 def obtener_dietas (id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -226,7 +246,7 @@ def obtener_dietas (id):
     
     return jsonify(resultado)
 
-@app.route('/momentos_dias/<int:id>', methods=('GET',))
+@app.route('/api/momentos_dias/<int:id>', methods=('GET',))
 def obtener_recetas_por_momento(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
@@ -247,7 +267,7 @@ def obtener_recetas_por_momento(id):
     return jsonify(resultado)
 
 
-@app.route('/search/<int:id>', methods=('GET',))
+@app.route('/api/search/<int:id>', methods=('GET',))
 def obtener_recetas(id):
     conn = conectarseABaseDeDatos()
     cursor = conn.cursor(dictionary=True)
